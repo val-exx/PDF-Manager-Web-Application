@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PDF Manager online per eliminare pagine, aggiungere pagine da altri PDF, visualizzare l'anteprima finale e salvare il documento modificato direttamente dal browser.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="PDF Manager Online">
+    <meta property="og:description" content="Gestisci PDF online: elimina pagine, aggiungi pagine da altri PDF, controlla l'anteprima e scarica il file finale.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#c8ecff">
+    <title>PDF Manager Online - Modifica pagine PDF</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app-shell">
+        <div class="topbar">
+            <span class="brand-mark">PDF</span>
+
+            <div class="language-switcher" aria-label="Language">
+                <button class="language-option" type="button" data-lang="en" aria-pressed="false">
+                    <span class="flag flag-en" aria-hidden="true"></span>
+                    <span>EN</span>
+                </button>
+                <button class="language-option" type="button" data-lang="fr" aria-pressed="false">
+                    <span class="flag flag-fr" aria-hidden="true"></span>
+                    <span>FR</span>
+                </button>
+                <button class="language-option" type="button" data-lang="it" aria-pressed="true">
+                    <span class="flag flag-it" aria-hidden="true"></span>
+                    <span>IT</span>
+                </button>
+                <button class="language-option" type="button" data-lang="es" aria-pressed="false">
+                    <span class="flag flag-es" aria-hidden="true"></span>
+                    <span>ES</span>
+                </button>
+            </div>
+        </div>
+
+        <section class="hero-panel" aria-labelledby="appTitle">
+            <div class="hero-copy">
+                <span class="eyebrow" data-i18n="eyebrow">Smart PDF workspace</span>
+                <h1 id="appTitle" data-i18n="title">PDF Manager</h1>
+                <p data-i18n="subtitle">Carica, visualizza e modifica le pagine del tuo PDF in un unico spazio di lavoro.</p>
+            </div>
+
+            <div class="upload-card">
+                <div class="upload-icon" aria-hidden="true">PDF</div>
+                <div>
+                    <h2 data-i18n="uploadTitle">Apri il tuo file</h2>
+                    <p data-i18n="uploadDesc">Seleziona un PDF dal computer per iniziare a gestire le pagine.</p>
+                </div>
+
+                <input type="file" id="pdfInput" accept=".pdf" hidden>
+
+                <div class="actions">
+                    <button id="chooseFileBtn" class="button button-secondary" type="button" data-i18n="selectPdf">Seleziona PDF</button>
+                    <button id="loadBtn" class="button button-primary" type="button" data-i18n="openPdf" disabled>Apri PDF</button>
+                </div>
+
+                <div class="file-status">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    <span id="fileName" data-i18n="noPdf">Nessun PDF selezionato</span>
+                </div>
+
+                <p id="pageInfo" class="page-info" aria-live="polite"></p>
+            </div>
+        </section>
+
+        <section id="managerSection" class="workspace" hidden>
+            <div class="workspace-header">
+                <div>
+                    <span class="eyebrow" data-i18n="managerLabel">PDF manager</span>
+                    <h2 data-i18n="workspaceTitle">Gestisci le pagine</h2>
+                    <p id="workspaceSummary"></p>
+                </div>
+
+                <div class="toolbar-actions">
+                    <button id="deleteSelectedBtn" class="button button-danger" type="button" data-i18n="deleteSelected" disabled>Elimina selezionate</button>
+                    <button id="sourceFileBtn" class="button button-secondary" type="button" data-i18n="chooseSource">Aggiungi da altro PDF</button>
+                    <label class="insert-control" for="insertAfterPageInput">
+                        <span data-i18n="insertAfterLabel">Inserisci dopo pagina</span>
+                        <input id="insertAfterPageInput" type="number" min="0" value="0" inputmode="numeric" disabled>
+                    </label>
+                    <button id="addSelectedBtn" class="button button-primary" type="button" data-i18n="addSelected" disabled>Aggiungi pagine</button>
+                    <button id="previewBtn" class="button button-secondary" type="button" data-i18n="previewPdf">Anteprima PDF</button>
+                    <button id="downloadBtn" class="button button-dark" type="button" data-i18n="downloadPdf">Scarica PDF</button>
+                </div>
+            </div>
+
+            <input type="file" id="sourcePdfInput" accept=".pdf" hidden>
+
+            <div class="workspace-grid">
+                <section class="pages-panel">
+                    <div class="panel-header">
+                        <div>
+                            <h3 data-i18n="currentPages">Pagine del PDF</h3>
+                            <p id="selectionInfo"></p>
+                        </div>
+                        <button id="clearMainSelectionBtn" class="ghost-button" type="button" data-i18n="clearSelection">Deseleziona</button>
+                    </div>
+                    <div id="pagesGrid" class="page-grid" aria-live="polite"></div>
+                </section>
+
+                <section id="sourcePanel" class="pages-panel source-panel" hidden>
+                    <div class="panel-header">
+                        <div>
+                            <h3 data-i18n="sourcePages">Pagine da importare</h3>
+                            <p id="sourceInfo"></p>
+                        </div>
+                        <button id="clearSourceSelectionBtn" class="ghost-button" type="button" data-i18n="clearSelection">Deseleziona</button>
+                    </div>
+                    <div id="sourcePagesGrid" class="page-grid compact" aria-live="polite"></div>
+                </section>
+            </div>
+        </section>
+
+        <section id="previewSection" class="preview-section" hidden aria-labelledby="previewTitle">
+            <div class="preview-header">
+                <div>
+                    <span class="eyebrow" data-i18n="previewLabel">Anteprima finale</span>
+                    <h2 id="previewTitle" data-i18n="previewTitle">Controlla il PDF modificato</h2>
+                    <p data-i18n="previewDesc">Scorri il documento pagina per pagina prima di salvarlo.</p>
+                </div>
+
+                <div class="preview-actions">
+                    <button id="closePreviewBtn" class="button button-secondary" type="button" data-i18n="closePreview">Chiudi anteprima</button>
+                    <button id="downloadFromPreviewBtn" class="button button-dark" type="button" data-i18n="downloadPdf">Scarica PDF</button>
+                </div>
+            </div>
+
+            <iframe id="finalPreviewFrame" class="final-preview-frame" title="PDF preview"></iframe>
+        </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+
+</body>
+</html>
