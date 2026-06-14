@@ -96,6 +96,17 @@ After publishing:
 3. Request indexing for the homepage.
 4. Add the final public URL to a sitemap if the site grows beyond one page.
 
+Production domain:
+
+```text
+https://valexlab.eu/
+```
+
+Recommended canonical setup:
+
+- `valexlab.eu` as the canonical domain
+- `www.valexlab.eu` as an alias that redirects to `valexlab.eu`
+
 ## Project Structure
 
 ```text
