@@ -198,10 +198,19 @@ const fileStatus = document.querySelector(".file-status");
 const managerSection = document.getElementById("managerSection");
 const sourcePanel = document.getElementById("sourcePanel");
 const previewSection = document.getElementById("previewSection");
+const portfolioSection = document.getElementById("portfolioSection");
+const pdfManagerApp = document.getElementById("pdfManagerApp");
 const finalPreviewFrame = document.getElementById("finalPreviewFrame");
 const pagesGrid = document.getElementById("pagesGrid");
 const sourcePagesGrid = document.getElementById("sourcePagesGrid");
 const languageButtons = document.querySelectorAll(".language-option");
+const routeLinks = document.querySelectorAll("[data-route]");
+const navLinks = document.querySelectorAll(".site-nav a");
+const metaDescription = document.querySelector("meta[name='description']");
+const ogTitle = document.querySelector("meta[property='og:title']");
+const ogDescription = document.querySelector("meta[property='og:description']");
+const ogUrl = document.querySelector("meta[property='og:url']");
+const canonicalLink = document.querySelector("link[rel='canonical']");
 const savedLanguage = localStorage.getItem("pdf-manager-language");
 
 const state = {
@@ -218,6 +227,70 @@ const state = {
   },
   finalPreviewUrl: "",
 };
+
+const pages = {
+  home: {
+    path: "/",
+    title: "ValexLab - Portfolio di applicazioni web",
+    description: "ValexLab e un portfolio di applicazioni web, strumenti gestionali e prototipi digitali per piccole e medie imprese.",
+    canonical: "https://valexlab.eu/",
+  },
+  pdfManager: {
+    path: "/pdfmanager",
+    title: "PDF Manager Online - ValexLab",
+    description: "PDF Manager online per eliminare pagine, aggiungere pagine da altri PDF, visualizzare l'anteprima finale e salvare il documento modificato direttamente dal browser.",
+    canonical: "https://valexlab.eu/pdfmanager",
+  },
+};
+
+function normalizePath(pathname) {
+  if (pathname === "/pdfmanager" || pathname === "/pdfmanager/") {
+    return "/pdfmanager";
+  }
+
+  return "/";
+}
+
+function setPageMetadata(page) {
+  document.title = page.title;
+  metaDescription.content = page.description;
+  ogTitle.content = page.title;
+  ogDescription.content = page.description;
+  ogUrl.content = page.canonical;
+  canonicalLink.href = page.canonical;
+}
+
+function renderRoute(pathname = window.location.pathname) {
+  const path = normalizePath(pathname);
+  const isPdfManager = path === "/pdfmanager";
+  const page = isPdfManager ? pages.pdfManager : pages.home;
+
+  portfolioSection.hidden = isPdfManager;
+  pdfManagerApp.hidden = !isPdfManager;
+  setPageMetadata(page);
+
+  navLinks.forEach((link) => {
+    link.classList.toggle("is-active", normalizePath(new URL(link.href).pathname) === path);
+  });
+}
+
+routeLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const url = new URL(link.href);
+    const path = normalizePath(url.pathname);
+
+    if (url.origin !== window.location.origin) {
+      return;
+    }
+
+    event.preventDefault();
+    window.history.pushState({}, "", path);
+    renderRoute(path);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});
+
+window.addEventListener("popstate", () => renderRoute());
 
 function translate(key, values = {}) {
   const dictionary = translations[state.language] || translations.it;
@@ -625,3 +698,4 @@ languageButtons.forEach((button) => {
 });
 
 applyLanguage(state.language);
+renderRoute();

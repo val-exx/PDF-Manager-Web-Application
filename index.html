@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="PDF Manager online per eliminare pagine, aggiungere pagine da altri PDF, visualizzare l'anteprima finale e salvare il documento modificato direttamente dal browser.">
+    <meta name="description" content="ValexLab e un portfolio di applicazioni web, strumenti gestionali e prototipi digitali per piccole e medie imprese.">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="PDF Manager Online">
-    <meta property="og:description" content="Gestisci PDF online: elimina pagine, aggiungi pagine da altri PDF, controlla l'anteprima e scarica il file finale.">
+    <meta property="og:title" content="ValexLab - Portfolio di applicazioni web">
+    <meta property="og:description" content="Portfolio di progetti web, PDF tools e sistemi gestionali per PMI.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://valexlab.eu/">
     <meta name="theme-color" content="#c8ecff">
-    <title>PDF Manager Online - Modifica pagine PDF</title>
+    <title>ValexLab - Portfolio di applicazioni web</title>
     <link rel="canonical" href="https://valexlab.eu/">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -18,28 +18,87 @@
 
     <main class="app-shell">
         <div class="topbar">
-            <span class="brand-mark">PDF</span>
+            <a class="brand-link" href="/" data-route>
+                <span class="brand-mark">VL</span>
+                <span>ValexLab</span>
+            </a>
 
-            <div class="language-switcher" aria-label="Language">
-                <button class="language-option" type="button" data-lang="en" aria-pressed="false">
-                    <span class="flag flag-en" aria-hidden="true"></span>
-                    <span>EN</span>
-                </button>
-                <button class="language-option" type="button" data-lang="fr" aria-pressed="false">
-                    <span class="flag flag-fr" aria-hidden="true"></span>
-                    <span>FR</span>
-                </button>
-                <button class="language-option" type="button" data-lang="it" aria-pressed="true">
-                    <span class="flag flag-it" aria-hidden="true"></span>
-                    <span>IT</span>
-                </button>
-                <button class="language-option" type="button" data-lang="es" aria-pressed="false">
-                    <span class="flag flag-es" aria-hidden="true"></span>
-                    <span>ES</span>
-                </button>
+            <div class="topbar-actions">
+                <nav class="site-nav" aria-label="Main navigation">
+                    <a href="/" data-route>Portfolio</a>
+                    <a href="/pdfmanager" data-route>PDF Manager</a>
+                </nav>
+
+                <div class="language-switcher" aria-label="Language">
+                    <button class="language-option" type="button" data-lang="en" aria-pressed="false">
+                        <span class="flag flag-en" aria-hidden="true"></span>
+                        <span>EN</span>
+                    </button>
+                    <button class="language-option" type="button" data-lang="fr" aria-pressed="false">
+                        <span class="flag flag-fr" aria-hidden="true"></span>
+                        <span>FR</span>
+                    </button>
+                    <button class="language-option" type="button" data-lang="it" aria-pressed="true">
+                        <span class="flag flag-it" aria-hidden="true"></span>
+                        <span>IT</span>
+                    </button>
+                    <button class="language-option" type="button" data-lang="es" aria-pressed="false">
+                        <span class="flag flag-es" aria-hidden="true"></span>
+                        <span>ES</span>
+                    </button>
+                </div>
             </div>
         </div>
 
+        <section id="portfolioSection" class="portfolio-shell" aria-labelledby="portfolioTitle">
+            <div class="portfolio-hero">
+                <div class="portfolio-copy">
+                    <span class="eyebrow">Digital tools for operations</span>
+                    <h1 id="portfolioTitle">ValexLab</h1>
+                    <p>Portfolio di applicazioni web, strumenti gestionali e prototipi digitali pensati per semplificare processi, documenti e flussi operativi nelle piccole e medie imprese.</p>
+                    <div class="portfolio-actions">
+                        <a class="button button-primary" href="/pdfmanager" data-route>Apri PDF Manager</a>
+                        <a class="button button-secondary" href="#projects">Vedi i progetti</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-panel">
+                    <span class="panel-kicker">Focus</span>
+                    <h2>Sistemi pratici, chiari, utilizzabili.</h2>
+                    <p>ValexLab nasce come laboratorio di progetti web: tool verticali, gestionali leggeri e interfacce operative per rendere piu semplice il lavoro quotidiano.</p>
+                </div>
+            </div>
+
+            <section id="projects" class="projects-section" aria-labelledby="projectsTitle">
+                <div class="section-heading">
+                    <span class="eyebrow">Projects</span>
+                    <h2 id="projectsTitle">Progetti in evidenza</h2>
+                </div>
+
+                <div class="project-grid">
+                    <article class="project-card project-card-active">
+                        <span class="project-status">Live tool</span>
+                        <h3>PDF Manager</h3>
+                        <p>Gestisci PDF direttamente nel browser: elimina pagine, importa pagine da altri documenti, scegli dove inserirle e scarica il file finale.</p>
+                        <a href="/pdfmanager" data-route>Apri progetto</a>
+                    </article>
+
+                    <article class="project-card">
+                        <span class="project-status">Roadmap</span>
+                        <h3>Gestione Qualita</h3>
+                        <p>Prototipo futuro per procedure, controlli, non conformita e documentazione qualita nelle PMI.</p>
+                    </article>
+
+                    <article class="project-card">
+                        <span class="project-status">Roadmap</span>
+                        <h3>Gestione Produzione</h3>
+                        <p>Spazio per un sistema operativo dedicato a commesse, avanzamento lavori, materiali e report essenziali.</p>
+                    </article>
+                </div>
+            </section>
+        </section>
+
+        <div id="pdfManagerApp" class="pdf-manager-route" hidden>
         <section class="hero-panel" aria-labelledby="appTitle">
             <div class="hero-copy">
                 <span class="eyebrow" data-i18n="eyebrow">Smart PDF workspace</span>
@@ -134,6 +193,7 @@
 
             <iframe id="finalPreviewFrame" class="final-preview-frame" title="PDF preview"></iframe>
         </section>
+        </div>
     </main>
 
     <script type="module" src="app.js"></script>

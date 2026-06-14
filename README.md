@@ -107,6 +107,13 @@ Recommended canonical setup:
 - `valexlab.eu` as the canonical domain
 - `www.valexlab.eu` as an alias that redirects to `valexlab.eu`
 
+Site structure:
+
+```text
+https://valexlab.eu/
+https://valexlab.eu/pdfmanager
+```
+
 ## Project Structure
 
 ```text
