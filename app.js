@@ -173,6 +173,92 @@ const translations = {
     saveCanceled: "Guardado cancelado.",
     savedName: "editado",
   },
+  de: {
+    eyebrow: "Smart PDF workspace",
+    title: "PDF Manager",
+    subtitle: "Laden, pruefen und bearbeiten Sie die Seiten Ihrer PDF in einem klaren Arbeitsbereich.",
+    uploadTitle: "Datei oeffnen",
+    uploadDesc: "Waehlen Sie eine PDF von Ihrem Computer, um die Seiten zu verwalten.",
+    selectPdf: "PDF waehlen",
+    openPdf: "PDF oeffnen",
+    noPdf: "Keine PDF ausgewaehlt",
+    managerLabel: "PDF manager",
+    workspaceTitle: "Seiten verwalten",
+    deleteSelected: "Auswahl loeschen",
+    chooseSource: "Aus anderer PDF hinzufuegen",
+    insertAfterLabel: "Einfuegen nach Seite",
+    addSelected: "Seiten hinzufuegen",
+    previewPdf: "PDF Vorschau",
+    downloadPdf: "PDF herunterladen",
+    previewLabel: "Finale Vorschau",
+    previewTitle: "Bearbeitete PDF pruefen",
+    previewDesc: "Blaettern Sie Seite fuer Seite durch das Dokument, bevor Sie es speichern.",
+    closePreview: "Vorschau schliessen",
+    currentPages: "PDF Seiten",
+    sourcePages: "Seiten importieren",
+    clearSelection: "Auswahl leeren",
+    sourceReady: "{file} geladen. Waehlen Sie die Seiten zum Hinzufuegen.",
+    mainReady: "{file} enthaelt {count} Seiten.",
+    selectedMain: "{selected} von {count} Seiten ausgewaehlt.",
+    selectedSource: "{selected} von {count} Seiten fuer den Import ausgewaehlt.",
+    noMainSelection: "Waehlen Sie eine oder mehrere Seiten zum Loeschen.",
+    noSourceSelection: "Waehlen Sie eine oder mehrere Seiten aus der zweiten PDF.",
+    cannotDeleteAll: "Mindestens eine Seite muss in der PDF bleiben.",
+    deleted: "{count} Seiten geloescht.",
+    added: "{count} Seiten hinzugefuegt.",
+    addedAtStart: "{count} Seiten am Anfang eingefuegt.",
+    addedAfter: "{count} Seiten nach Seite {page} eingefuegt.",
+    invalidInsertPage: "Geben Sie eine Seitennummer von 0 bis {count} ein. 0 fuegt am Anfang ein.",
+    page: "Seite",
+    importPage: "Seite importieren",
+    loading: "PDF Seiten werden geladen...",
+    invalidPdf: "Diese Datei konnte nicht als PDF geoeffnet werden.",
+    saveCanceled: "Speichern abgebrochen.",
+    savedName: "bearbeitet",
+  },
+  zh: {
+    eyebrow: "Smart PDF workspace",
+    title: "PDF Manager",
+    subtitle: "Upload, preview and edit PDF pages in one clean workspace.",
+    uploadTitle: "Open your file",
+    uploadDesc: "Choose a PDF from your computer to start managing its pages.",
+    selectPdf: "Select PDF",
+    openPdf: "Open PDF",
+    noPdf: "No PDF selected",
+    managerLabel: "PDF manager",
+    workspaceTitle: "Manage pages",
+    deleteSelected: "Delete selected",
+    chooseSource: "Add from another PDF",
+    insertAfterLabel: "Insert after page",
+    addSelected: "Add pages",
+    previewPdf: "Preview PDF",
+    downloadPdf: "Download PDF",
+    previewLabel: "Final preview",
+    previewTitle: "Review the edited PDF",
+    previewDesc: "Scroll through the document page by page before saving it.",
+    closePreview: "Close preview",
+    currentPages: "PDF pages",
+    sourcePages: "Pages to import",
+    clearSelection: "Clear",
+    sourceReady: "{file} loaded. Select the pages to add.",
+    mainReady: "{file} contains {count} pages.",
+    selectedMain: "{selected} of {count} pages selected.",
+    selectedSource: "{selected} of {count} pages selected to import.",
+    noMainSelection: "Select one or more pages to delete.",
+    noSourceSelection: "Select one or more pages from the second PDF.",
+    cannotDeleteAll: "Keep at least one page in the PDF.",
+    deleted: "{count} pages deleted.",
+    added: "{count} pages added.",
+    addedAtStart: "{count} pages inserted at the beginning.",
+    addedAfter: "{count} pages inserted after page {page}.",
+    invalidInsertPage: "Type a page number from 0 to {count}. Use 0 to insert at the beginning.",
+    page: "Page",
+    importPage: "Import page",
+    loading: "Loading PDF pages...",
+    invalidPdf: "This file could not be opened as a PDF.",
+    saveCanceled: "Save canceled.",
+    savedName: "edited",
+  },
 };
 
 const pdfInput = document.getElementById("pdfInput");
@@ -204,8 +290,15 @@ const finalPreviewFrame = document.getElementById("finalPreviewFrame");
 const pagesGrid = document.getElementById("pagesGrid");
 const sourcePagesGrid = document.getElementById("sourcePagesGrid");
 const languageButtons = document.querySelectorAll(".language-option");
+const languageDropdown = document.querySelector(".language-dropdown");
+const languageToggle = document.querySelector(".language-toggle");
+const languageCurrent = document.querySelector(".language-current");
+const languageToggleFlag = languageToggle?.querySelector(".flag");
+const navDropdown = document.querySelector(".nav-dropdown");
+const navDropdownToggle = document.querySelector(".nav-dropdown-toggle");
 const routeLinks = document.querySelectorAll("[data-route]");
-const navLinks = document.querySelectorAll(".site-nav a");
+const navLinks = document.querySelectorAll(".site-nav a[data-route]");
+const hashLinks = document.querySelectorAll('a[href^="#"]');
 const metaDescription = document.querySelector("meta[name='description']");
 const ogTitle = document.querySelector("meta[property='og:title']");
 const ogDescription = document.querySelector("meta[property='og:description']");
@@ -233,7 +326,7 @@ function generatePortfolioParticles() {
 }
 
 function initPortfolioReveal() {
-  const items = document.querySelectorAll(".service-card, .project-card, .workflow-item");
+  const items = document.querySelectorAll(".service-card, .skill-card, .project-card, .workflow-item");
   if (!items.length) {
     return;
   }
@@ -322,6 +415,13 @@ function renderRoute(pathname = window.location.pathname) {
   });
 }
 
+function closeDropdowns() {
+  navDropdown?.classList.remove("is-open");
+  languageDropdown?.classList.remove("is-open");
+  navDropdownToggle?.setAttribute("aria-expanded", "false");
+  languageToggle?.setAttribute("aria-expanded", "false");
+}
+
 routeLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
     const url = new URL(link.href);
@@ -332,9 +432,31 @@ routeLinks.forEach((link) => {
     }
 
     event.preventDefault();
+    closeDropdowns();
     window.history.pushState({}, "", path);
     renderRoute(path);
     window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});
+
+hashLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const targetId = link.getAttribute("href");
+    if (!targetId || targetId === "#") {
+      return;
+    }
+
+    event.preventDefault();
+    closeDropdowns();
+
+    if (normalizePath(window.location.pathname) !== "/") {
+      window.history.pushState({}, "", "/");
+      renderRoute("/");
+    }
+
+    requestAnimationFrame(() => {
+      document.querySelector(targetId)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
   });
 });
 
@@ -363,6 +485,16 @@ function applyLanguage(language) {
     button.classList.toggle("is-active", isActive);
     button.setAttribute("aria-pressed", String(isActive));
   });
+
+  const selectedLanguage = [...languageButtons].find((button) => button.dataset.lang === language);
+  if (selectedLanguage && languageCurrent) {
+    languageCurrent.textContent = selectedLanguage.dataset.label || language.toUpperCase();
+  }
+
+  if (selectedLanguage && languageToggleFlag) {
+    languageToggleFlag.className = "";
+    languageToggleFlag.classList.add("flag", `flag-${language}`);
+  }
 
   if (!pdfInput.files[0] && !state.mainDoc) {
     fileName.textContent = translate("noPdf");
@@ -741,8 +873,39 @@ clearSourceSelectionBtn.addEventListener("click", () => {
   updateSelectionText();
 });
 
+navDropdownToggle?.addEventListener("click", (event) => {
+  event.stopPropagation();
+  const willOpen = !navDropdown.classList.contains("is-open");
+  closeDropdowns();
+  navDropdown.classList.toggle("is-open", willOpen);
+  navDropdownToggle.setAttribute("aria-expanded", String(willOpen));
+});
+
+languageToggle?.addEventListener("click", (event) => {
+  event.stopPropagation();
+  const willOpen = !languageDropdown.classList.contains("is-open");
+  closeDropdowns();
+  languageDropdown.classList.toggle("is-open", willOpen);
+  languageToggle.setAttribute("aria-expanded", String(willOpen));
+});
+
+document.addEventListener("click", (event) => {
+  if (!event.target.closest(".nav-dropdown") && !event.target.closest(".language-dropdown")) {
+    closeDropdowns();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeDropdowns();
+  }
+});
+
 languageButtons.forEach((button) => {
-  button.addEventListener("click", () => applyLanguage(button.dataset.lang));
+  button.addEventListener("click", () => {
+    applyLanguage(button.dataset.lang);
+    closeDropdowns();
+  });
 });
 
 applyLanguage(state.language);

@@ -18,42 +18,84 @@
 
     <main class="app-shell">
         <div class="topbar">
-            <a class="brand-link" href="/" data-route>
-                <span class="brand-mark">VL</span>
-                <span>ValexLab</span>
+            <a class="brand-link" href="/" data-route aria-label="ValexLab home">
+                <span class="brand-logo" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" role="img">
+                        <defs>
+                            <linearGradient id="valexLogoGradient" x1="10" y1="10" x2="54" y2="54">
+                                <stop offset="0" stop-color="#7dd3fc" />
+                                <stop offset="0.55" stop-color="#38bdf8" />
+                                <stop offset="1" stop-color="#2563eb" />
+                            </linearGradient>
+                        </defs>
+                        <path class="logo-shield" d="M32 5 55 18v28L32 59 9 46V18L32 5Z" />
+                        <path class="logo-flow" d="M19 36h9l5-11 5 18 5-12h6" />
+                        <circle cx="19" cy="36" r="3" />
+                        <circle cx="49" cy="31" r="3" />
+                        <path class="logo-check" d="m22 24 7 7 14-15" />
+                    </svg>
+                </span>
+                <span class="brand-name">ValexLab</span>
             </a>
 
             <div class="topbar-actions">
                 <nav class="site-nav" aria-label="Main navigation">
-                    <a href="/" data-route>Portfolio</a>
-                    <a href="#services">Servizi</a>
-                    <a href="#projects">Progetti</a>
-                    <a href="/pdfmanager" data-route>PDF Manager</a>
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <div class="nav-dropdown">
+                        <button class="nav-dropdown-toggle" type="button" aria-expanded="false">
+                            Project
+                            <span aria-hidden="true">v</span>
+                        </button>
+                        <div class="nav-dropdown-menu">
+                            <a href="/pdfmanager" data-route>PDF Manager</a>
+                            <a href="#projects">Gestionale Qualita</a>
+                            <a href="#projects">Dashboard PMI</a>
+                            <a href="#projects">Gestione Produzione</a>
+                        </div>
+                    </div>
+                    <a href="#contact">Contatti</a>
                 </nav>
 
-                <div class="language-switcher" aria-label="Language">
-                    <button class="language-option" type="button" data-lang="en" aria-pressed="false">
-                        <span class="flag flag-en" aria-hidden="true"></span>
-                        <span>EN</span>
-                    </button>
-                    <button class="language-option" type="button" data-lang="fr" aria-pressed="false">
-                        <span class="flag flag-fr" aria-hidden="true"></span>
-                        <span>FR</span>
-                    </button>
-                    <button class="language-option" type="button" data-lang="it" aria-pressed="true">
+                <div class="language-dropdown">
+                    <button class="language-toggle" type="button" aria-expanded="false" aria-label="Seleziona lingua">
                         <span class="flag flag-it" aria-hidden="true"></span>
-                        <span>IT</span>
+                        <span class="language-current">Italiano</span>
+                        <span aria-hidden="true">v</span>
                     </button>
-                    <button class="language-option" type="button" data-lang="es" aria-pressed="false">
-                        <span class="flag flag-es" aria-hidden="true"></span>
-                        <span>ES</span>
-                    </button>
+                    <div class="language-menu" aria-label="Language">
+                        <button class="language-option" type="button" data-lang="it" data-label="Italiano" aria-pressed="true">
+                            <span class="flag flag-it" aria-hidden="true"></span>
+                            <span>Italiano</span>
+                        </button>
+                        <button class="language-option" type="button" data-lang="en" data-label="English" aria-pressed="false">
+                            <span class="flag flag-en" aria-hidden="true"></span>
+                            <span>English</span>
+                        </button>
+                        <button class="language-option" type="button" data-lang="fr" data-label="Francais" aria-pressed="false">
+                            <span class="flag flag-fr" aria-hidden="true"></span>
+                            <span>Francais</span>
+                        </button>
+                        <button class="language-option" type="button" data-lang="de" data-label="Deutsch" aria-pressed="false">
+                            <span class="flag flag-de" aria-hidden="true"></span>
+                            <span>Deutsch</span>
+                        </button>
+                        <button class="language-option" type="button" data-lang="es" data-label="Espanol" aria-pressed="false">
+                            <span class="flag flag-es" aria-hidden="true"></span>
+                            <span>Espanol</span>
+                        </button>
+                        <button class="language-option" type="button" data-lang="zh" data-label="Cinese" aria-pressed="false">
+                            <span class="flag flag-zh" aria-hidden="true"></span>
+                            <span>Cinese</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
 
         <section id="portfolioSection" class="portfolio-shell" aria-labelledby="portfolioTitle">
-            <div class="portfolio-hero">
+            <div class="portfolio-hero" id="home">
                 <div class="portfolio-dynamic-bg" aria-hidden="true">
                     <div class="code-grid-bg"></div>
                     <div id="portfolioParticles" class="floating-particles"></div>
@@ -115,6 +157,18 @@
                 </div>
             </div>
 
+            <section id="about" class="about-section" aria-labelledby="aboutTitle">
+                <div>
+                    <span class="eyebrow">About</span>
+                    <h2 id="aboutTitle">Soluzioni digitali chiare per processi aziendali reali.</h2>
+                </div>
+                <p>
+                    ValexLab e un portfolio dedicato a tool web e sistemi gestionali per PMI: qualita,
+                    documentazione, produzione, dashboard operative e piccoli automatismi costruiti per
+                    semplificare il lavoro quotidiano.
+                </p>
+            </section>
+
             <section id="services" class="services-section" aria-labelledby="servicesTitle">
                 <div class="section-heading">
                     <span class="section-number">01</span>
@@ -151,9 +205,45 @@
                 </div>
             </section>
 
-            <section id="projects" class="projects-section" aria-labelledby="projectsTitle">
+            <section id="skills" class="skills-section" aria-labelledby="skillsTitle">
                 <div class="section-heading">
                     <span class="section-number">02</span>
+                    <div>
+                        <span class="eyebrow">Skills</span>
+                        <h2 id="skillsTitle">Competenze per gestionali moderni e facili da usare</h2>
+                    </div>
+                </div>
+
+                <div class="skills-grid">
+                    <article class="skill-card">
+                        <span>01</span>
+                        <h3>Analisi processi</h3>
+                        <p>Mappatura di ruoli, dati, documenti e punti critici prima di progettare l'interfaccia.</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <span>02</span>
+                        <h3>Web app operative</h3>
+                        <p>Schermate responsive, leggere e orientate a chi deve lavorare in modo rapido.</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <span>03</span>
+                        <h3>Dashboard e KPI</h3>
+                        <p>Vista sintetica di avanzamenti, priorita, controlli e indicatori utili alla gestione.</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <span>04</span>
+                        <h3>Workflow documentali</h3>
+                        <p>Gestione di PDF, revisioni, allegati e procedure con passaggi semplici e tracciabili.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="projects" class="projects-section" aria-labelledby="projectsTitle">
+                <div class="section-heading">
+                    <span class="section-number">03</span>
                     <div>
                         <span class="eyebrow">Projects</span>
                         <h2 id="projectsTitle">Progetti in evidenza</h2>
@@ -184,7 +274,7 @@
 
             <section class="workflow-section" aria-labelledby="workflowTitle">
                 <div class="section-heading">
-                    <span class="section-number">03</span>
+                    <span class="section-number">04</span>
                     <div>
                         <span class="eyebrow">Method</span>
                         <h2 id="workflowTitle">Dal problema al prototipo</h2>
@@ -208,6 +298,15 @@
                         <p>Migliorare il prototipo con feedback pratici fino ad arrivare a uno strumento stabile.</p>
                     </div>
                 </div>
+            </section>
+
+            <section id="contact" class="contact-section" aria-labelledby="contactTitle">
+                <div>
+                    <span class="eyebrow">Contatti</span>
+                    <h2 id="contactTitle">Hai un processo da trasformare in gestionale?</h2>
+                    <p>Questa sezione e pronta per raccogliere richieste, demo e nuove idee di progetto per ValexLab.</p>
+                </div>
+                <a class="button button-primary" href="mailto:info@valexlab.eu">Scrivi a ValexLab</a>
             </section>
 
             <section class="portfolio-cta" aria-labelledby="ctaTitle">
