@@ -213,6 +213,54 @@ const ogUrl = document.querySelector("meta[property='og:url']");
 const canonicalLink = document.querySelector("link[rel='canonical']");
 const savedLanguage = localStorage.getItem("pdf-manager-language");
 
+function generatePortfolioParticles() {
+  const container = document.getElementById("portfolioParticles");
+  if (!container || container.children.length) {
+    return;
+  }
+
+  const symbols = ["{", "}", "[", "]", "<", "/>", "=", "+", "01", "QA", "OP", "PDF"];
+  for (let index = 0; index < 24; index += 1) {
+    const particle = document.createElement("span");
+    particle.className = "particle";
+    particle.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+    particle.style.left = `${Math.random() * 100}%`;
+    particle.style.top = `${Math.random() * 100}%`;
+    particle.style.setProperty("--delay", `${Math.random() * -12}s`);
+    particle.style.setProperty("--duration", `${12 + Math.random() * 10}s`);
+    container.appendChild(particle);
+  }
+}
+
+function initPortfolioReveal() {
+  const items = document.querySelectorAll(".service-card, .project-card, .workflow-item");
+  if (!items.length) {
+    return;
+  }
+
+  if (!("IntersectionObserver" in window)) {
+    items.forEach((item) => item.classList.add("is-visible"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.16 },
+  );
+
+  items.forEach((item, index) => {
+    item.style.transitionDelay = `${Math.min(index * 70, 280)}ms`;
+    observer.observe(item);
+  });
+}
+
 const state = {
   language: translations[savedLanguage] ? savedLanguage : "it",
   mainDoc: null,
@@ -699,3 +747,5 @@ languageButtons.forEach((button) => {
 
 applyLanguage(state.language);
 renderRoute();
+generatePortfolioParticles();
+initPortfolioReveal();
