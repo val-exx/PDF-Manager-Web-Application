@@ -40,21 +40,21 @@
 
             <div class="topbar-actions">
                 <nav class="site-nav" aria-label="Main navigation">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#skills">Skills</a>
+                    <a href="#home" data-i18n="navHome">Home</a>
+                    <a href="#about" data-i18n="navAbout">About</a>
+                    <a href="#skills" data-i18n="navSkills">Skills</a>
                     <div class="nav-dropdown">
-                        <button class="nav-dropdown-toggle" type="button" aria-expanded="false">
+                        <button class="nav-dropdown-toggle" type="button" aria-expanded="false" data-i18n="navProjects">
                             Project
                         </button>
                         <div class="nav-dropdown-menu">
                             <a href="/pdfmanager" data-route>PDF Manager</a>
-                            <a href="#projects">Gestionale Qualita</a>
-                            <a href="#projects">Dashboard PMI</a>
-                            <a href="#projects">Gestione Produzione</a>
+                            <a href="#projects" data-i18n="menuQuality">Gestionale Qualita</a>
+                            <a href="#projects" data-i18n="menuDashboard">Dashboard PMI</a>
+                            <a href="#projects" data-i18n="menuProduction">Gestione Produzione</a>
                         </div>
                     </div>
-                    <a href="#contact">Contatti</a>
+                    <a href="#contact" data-i18n="navContact">Contatti</a>
                 </nav>
 
                 <div class="language-dropdown">
@@ -100,26 +100,26 @@
                 </div>
 
                 <div class="portfolio-copy">
-                    <span class="eyebrow">Business tools for PMI</span>
+                    <span class="eyebrow" data-i18n="portfolioEyebrow">Business tools for PMI</span>
                     <h1 id="portfolioTitle">ValexLab</h1>
-                    <p>Portfolio di applicazioni web e prototipi gestionali per piccole e medie imprese: strumenti chiari per qualita, produzione, documenti, commesse e flussi operativi.</p>
+                    <p data-i18n="portfolioSubtitle">Portfolio di applicazioni web e prototipi gestionali per piccole e medie imprese: strumenti chiari per qualita, produzione, documenti, commesse e flussi operativi.</p>
                     <div class="portfolio-actions">
-                        <a class="button button-primary" href="/pdfmanager" data-route>Apri PDF Manager</a>
-                        <a class="button button-secondary" href="#services">Esplora i servizi</a>
+                        <a class="button button-primary" href="/pdfmanager" data-route data-i18n="portfolioOpenPdf">Apri PDF Manager</a>
+                        <a class="button button-secondary" href="#services" data-i18n="portfolioExploreServices">Esplora i servizi</a>
                     </div>
 
                     <div class="hero-metrics" aria-label="ValexLab focus areas">
                         <div>
                             <strong>01</strong>
-                            <span>Tool pubblicato</span>
+                            <span data-i18n="metricTool">Tool pubblicato</span>
                         </div>
                         <div>
                             <strong>04</strong>
-                            <span>Aree gestionali</span>
+                            <span data-i18n="metricAreas">Aree gestionali</span>
                         </div>
                         <div>
                             <strong>100%</strong>
-                            <span>Client-side PDF</span>
+                            <span data-i18n="metricClientSide">Client-side PDF</span>
                         </div>
                     </div>
                 </div>
@@ -133,34 +133,34 @@
                             <strong>process.flow</strong>
                         </div>
                         <div class="code-snippet">
-                            <span><b>const</b> pmi = "processi reali";</span>
-                            <span><b>map</b>(flussi, dati, documenti);</span>
-                            <span><b>build</b>("prototipo operativo");</span>
-                            <span><b>release</b>("strumento semplice");</span>
+                            <span data-i18n="codeLine1"><b>const</b> pmi = "processi reali";</span>
+                            <span data-i18n="codeLine2"><b>map</b>(flussi, dati, documenti);</span>
+                            <span data-i18n="codeLine3"><b>build</b>("prototipo operativo");</span>
+                            <span data-i18n="codeLine4"><b>release</b>("strumento semplice");</span>
                         </div>
                     </div>
 
                     <div class="floating-badge badge-1">
                         <strong>QA</strong>
-                        <span>procedure & controlli</span>
+                        <span data-i18n="badgeQuality">procedure & controlli</span>
                     </div>
                     <div class="floating-badge badge-2">
                         <strong>OPS</strong>
-                        <span>commesse & produzione</span>
+                        <span data-i18n="badgeOps">commesse & produzione</span>
                     </div>
                     <div class="floating-badge badge-3">
                         <strong>DOC</strong>
-                        <span>PDF & automazioni</span>
+                        <span data-i18n="badgeDocs">PDF & automazioni</span>
                     </div>
                 </div>
             </div>
 
             <section id="about" class="about-section" aria-labelledby="aboutTitle">
                 <div>
-                    <span class="eyebrow">About</span>
-                    <h2 id="aboutTitle">Soluzioni digitali chiare per processi aziendali reali.</h2>
+                    <span class="eyebrow" data-i18n="aboutEyebrow">About</span>
+                    <h2 id="aboutTitle" data-i18n="aboutTitle">Soluzioni digitali chiare per processi aziendali reali.</h2>
                 </div>
-                <p>
+                <p data-i18n="aboutDesc">
                     ValexLab e un portfolio dedicato a tool web e sistemi gestionali per PMI: qualita,
                     documentazione, produzione, dashboard operative e piccoli automatismi costruiti per
                     semplificare il lavoro quotidiano.
@@ -171,34 +171,34 @@
                 <div class="section-heading">
                     <span class="section-number">01</span>
                     <div>
-                        <span class="eyebrow">Services</span>
-                        <h2 id="servicesTitle">Servizi digitali per gestionali PMI</h2>
+                        <span class="eyebrow" data-i18n="servicesEyebrow">Services</span>
+                        <h2 id="servicesTitle" data-i18n="servicesTitle">Servizi digitali per gestionali PMI</h2>
                     </div>
                 </div>
 
                 <div class="service-grid">
                     <article class="service-card">
                         <span class="service-icon">QA</span>
-                        <h3>Qualita e documentazione</h3>
-                        <p>Procedure, checklist, non conformita, audit interni e archivi documentali consultabili in modo ordinato.</p>
+                        <h3 data-i18n="serviceQualityTitle">Qualita e documentazione</h3>
+                        <p data-i18n="serviceQualityDesc">Procedure, checklist, non conformita, audit interni e archivi documentali consultabili in modo ordinato.</p>
                     </article>
 
                     <article class="service-card">
                         <span class="service-icon">OP</span>
-                        <h3>Produzione e operativita</h3>
-                        <p>Dashboard per commesse, avanzamento lavorazioni, priorita, materiali e tracciamento delle attivita chiave.</p>
+                        <h3 data-i18n="serviceOpsTitle">Produzione e operativita</h3>
+                        <p data-i18n="serviceOpsDesc">Dashboard per commesse, avanzamento lavorazioni, priorita, materiali e tracciamento delle attivita chiave.</p>
                     </article>
 
                     <article class="service-card">
                         <span class="service-icon">DOC</span>
-                        <h3>Documenti e automazioni</h3>
-                        <p>Tool per gestire PDF, moduli, allegati e piccoli automatismi che riducono lavoro ripetitivo.</p>
+                        <h3 data-i18n="serviceDocsTitle">Documenti e automazioni</h3>
+                        <p data-i18n="serviceDocsDesc">Tool per gestire PDF, moduli, allegati e piccoli automatismi che riducono lavoro ripetitivo.</p>
                     </article>
 
                     <article class="service-card">
                         <span class="service-icon">UX</span>
-                        <h3>Prototipi su misura</h3>
-                        <p>Interfacce rapide da testare con utenti reali prima di investire in un gestionale completo.</p>
+                        <h3 data-i18n="servicePrototypeTitle">Prototipi su misura</h3>
+                        <p data-i18n="servicePrototypeDesc">Interfacce rapide da testare con utenti reali prima di investire in un gestionale completo.</p>
                     </article>
                 </div>
             </section>
@@ -207,34 +207,34 @@
                 <div class="section-heading">
                     <span class="section-number">02</span>
                     <div>
-                        <span class="eyebrow">Skills</span>
-                        <h2 id="skillsTitle">Competenze per gestionali moderni e facili da usare</h2>
+                        <span class="eyebrow" data-i18n="skillsEyebrow">Skills</span>
+                        <h2 id="skillsTitle" data-i18n="skillsTitle">Competenze per gestionali moderni e facili da usare</h2>
                     </div>
                 </div>
 
                 <div class="skills-grid">
                     <article class="skill-card">
                         <span>01</span>
-                        <h3>Analisi processi</h3>
-                        <p>Mappatura di ruoli, dati, documenti e punti critici prima di progettare l'interfaccia.</p>
+                        <h3 data-i18n="skillProcessTitle">Analisi processi</h3>
+                        <p data-i18n="skillProcessDesc">Mappatura di ruoli, dati, documenti e punti critici prima di progettare l'interfaccia.</p>
                     </article>
 
                     <article class="skill-card">
                         <span>02</span>
-                        <h3>Web app operative</h3>
-                        <p>Schermate responsive, leggere e orientate a chi deve lavorare in modo rapido.</p>
+                        <h3 data-i18n="skillWebTitle">Web app operative</h3>
+                        <p data-i18n="skillWebDesc">Schermate responsive, leggere e orientate a chi deve lavorare in modo rapido.</p>
                     </article>
 
                     <article class="skill-card">
                         <span>03</span>
-                        <h3>Dashboard e KPI</h3>
-                        <p>Vista sintetica di avanzamenti, priorita, controlli e indicatori utili alla gestione.</p>
+                        <h3 data-i18n="skillDashboardTitle">Dashboard e KPI</h3>
+                        <p data-i18n="skillDashboardDesc">Vista sintetica di avanzamenti, priorita, controlli e indicatori utili alla gestione.</p>
                     </article>
 
                     <article class="skill-card">
                         <span>04</span>
-                        <h3>Workflow documentali</h3>
-                        <p>Gestione di PDF, revisioni, allegati e procedure con passaggi semplici e tracciabili.</p>
+                        <h3 data-i18n="skillWorkflowTitle">Workflow documentali</h3>
+                        <p data-i18n="skillWorkflowDesc">Gestione di PDF, revisioni, allegati e procedure con passaggi semplici e tracciabili.</p>
                     </article>
                 </div>
             </section>
@@ -243,29 +243,29 @@
                 <div class="section-heading">
                     <span class="section-number">03</span>
                     <div>
-                        <span class="eyebrow">Projects</span>
-                        <h2 id="projectsTitle">Progetti in evidenza</h2>
+                        <span class="eyebrow" data-i18n="projectsEyebrow">Projects</span>
+                        <h2 id="projectsTitle" data-i18n="projectsTitle">Progetti in evidenza</h2>
                     </div>
                 </div>
 
                 <div class="project-grid">
                     <article class="project-card project-card-active">
-                        <span class="project-status">Live tool</span>
+                        <span class="project-status" data-i18n="projectStatusLive">Live tool</span>
                         <h3>PDF Manager</h3>
-                        <p>Gestisci PDF direttamente nel browser: elimina pagine, importa pagine da altri documenti, scegli dove inserirle e scarica il file finale.</p>
-                        <a href="/pdfmanager" data-route>Apri progetto</a>
+                        <p data-i18n="projectPdfDesc">Gestisci PDF direttamente nel browser: elimina pagine, importa pagine da altri documenti, scegli dove inserirle e scarica il file finale.</p>
+                        <a href="/pdfmanager" data-route data-i18n="projectOpen">Apri progetto</a>
                     </article>
 
                     <article class="project-card">
-                        <span class="project-status">Roadmap</span>
-                        <h3>Gestione Qualita</h3>
-                        <p>Prototipo per procedure, controlli, non conformita, audit e documentazione qualita nelle PMI.</p>
+                        <span class="project-status" data-i18n="projectStatusRoadmap">Roadmap</span>
+                        <h3 data-i18n="projectQualityTitle">Gestione Qualita</h3>
+                        <p data-i18n="projectQualityDesc">Prototipo per procedure, controlli, non conformita, audit e documentazione qualita nelle PMI.</p>
                     </article>
 
                     <article class="project-card">
-                        <span class="project-status">Roadmap</span>
-                        <h3>Gestione Produzione</h3>
-                        <p>Spazio per un sistema operativo dedicato a commesse, avanzamento lavori, materiali e report essenziali.</p>
+                        <span class="project-status" data-i18n="projectStatusRoadmap">Roadmap</span>
+                        <h3 data-i18n="projectProductionTitle">Gestione Produzione</h3>
+                        <p data-i18n="projectProductionDesc">Spazio per un sistema operativo dedicato a commesse, avanzamento lavori, materiali e report essenziali.</p>
                     </article>
                 </div>
             </section>
@@ -274,46 +274,46 @@
                 <div class="section-heading">
                     <span class="section-number">04</span>
                     <div>
-                        <span class="eyebrow">Method</span>
-                        <h2 id="workflowTitle">Dal problema al prototipo</h2>
+                        <span class="eyebrow" data-i18n="methodEyebrow">Method</span>
+                        <h2 id="workflowTitle" data-i18n="methodTitle">Dal problema al prototipo</h2>
                     </div>
                 </div>
 
                 <div class="workflow-list">
                     <div class="workflow-item">
                         <span>01</span>
-                        <h3>Mappatura del flusso</h3>
-                        <p>Capire chi usa il sistema, quali dati servono e dove si perdono tempo o informazioni.</p>
+                        <h3 data-i18n="workflowMapTitle">Mappatura del flusso</h3>
+                        <p data-i18n="workflowMapDesc">Capire chi usa il sistema, quali dati servono e dove si perdono tempo o informazioni.</p>
                     </div>
                     <div class="workflow-item">
                         <span>02</span>
-                        <h3>Interfaccia operativa</h3>
-                        <p>Costruire schermate semplici, dense quanto basta e pronte per essere provate sul processo reale.</p>
+                        <h3 data-i18n="workflowUiTitle">Interfaccia operativa</h3>
+                        <p data-i18n="workflowUiDesc">Costruire schermate semplici, dense quanto basta e pronte per essere provate sul processo reale.</p>
                     </div>
                     <div class="workflow-item">
                         <span>03</span>
-                        <h3>Iterazione e rilascio</h3>
-                        <p>Migliorare il prototipo con feedback pratici fino ad arrivare a uno strumento stabile.</p>
+                        <h3 data-i18n="workflowReleaseTitle">Iterazione e rilascio</h3>
+                        <p data-i18n="workflowReleaseDesc">Migliorare il prototipo con feedback pratici fino ad arrivare a uno strumento stabile.</p>
                     </div>
                 </div>
             </section>
 
             <section id="contact" class="contact-section" aria-labelledby="contactTitle">
                 <div>
-                    <span class="eyebrow">Contatti</span>
-                    <h2 id="contactTitle">Hai un processo da trasformare in gestionale?</h2>
-                    <p>Questa sezione e pronta per raccogliere richieste, demo e nuove idee di progetto per ValexLab.</p>
+                    <span class="eyebrow" data-i18n="contactEyebrow">Contatti</span>
+                    <h2 id="contactTitle" data-i18n="contactTitle">Hai un processo da trasformare in gestionale?</h2>
+                    <p data-i18n="contactDesc">Questa sezione e pronta per raccogliere richieste, demo e nuove idee di progetto per ValexLab.</p>
                 </div>
-                <a class="button button-primary" href="mailto:info@valexlab.eu">Scrivi a ValexLab</a>
+                <a class="button button-primary" href="mailto:info@valexlab.eu" data-i18n="contactButton">Scrivi a ValexLab</a>
             </section>
 
             <section class="portfolio-cta" aria-labelledby="ctaTitle">
                 <div>
-                    <span class="eyebrow">Next</span>
-                    <h2 id="ctaTitle">Un portfolio che crescera progetto dopo progetto.</h2>
-                    <p>PDF Manager e il primo tassello. Le prossime aree saranno dedicate a qualita, produzione, magazzino e processi gestionali per PMI.</p>
+                    <span class="eyebrow" data-i18n="ctaEyebrow">Next</span>
+                    <h2 id="ctaTitle" data-i18n="ctaTitle">Un portfolio che crescera progetto dopo progetto.</h2>
+                    <p data-i18n="ctaDesc">PDF Manager e il primo tassello. Le prossime aree saranno dedicate a qualita, produzione, magazzino e processi gestionali per PMI.</p>
                 </div>
-                <a class="button button-primary" href="/pdfmanager" data-route>Prova il primo tool</a>
+                <a class="button button-primary" href="/pdfmanager" data-route data-i18n="ctaButton">Prova il primo tool</a>
             </section>
         </section>
 
