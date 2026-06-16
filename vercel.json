@@ -6,6 +6,10 @@
     {
       "source": "/pdfmanager",
       "destination": "/index.html"
+    },
+    {
+      "source": "/qualiflow",
+      "destination": "/index.html"
     }
   ]
 }

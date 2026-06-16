@@ -271,7 +271,7 @@ const portfolioTranslations = {
     menuQuality: "Gestione Qualità",
     menuDashboard: "Dashboard & KPI",
     menuProduction: "Gestione Produzione",
-    menuGestiva: "gestiva_v1",
+    menuGestiva: "QualiFlow PMI",
     menuShopSites: "Soluzioni su misura",
     portfolioEyebrow: "Soluzioni gestionali per aziende",
     portfolioSubtitle: "Creiamo gestionali e soluzioni software su misura per digitalizzare i processi aziendali: qualità, produzione, documenti, commesse e flussi operativi sempre sotto controllo.",
@@ -294,8 +294,8 @@ const portfolioTranslations = {
     serviceOpsDesc: "Dashboard per commesse, avanzamento lavorazioni, priorità, materiali e tracciamento delle attività chiave.",
     serviceDocsTitle: "Documenti & automazioni",
     serviceDocsDesc: "Strumenti per gestire PDF, moduli e allegati con automazioni che riducono il lavoro ripetitivo.",
-    serviceGestivaTitle: "gestiva_v1",
-    serviceGestivaDesc: "Gestionale modulare per attività, clienti, documenti e flussi operativi, pensato come base evolutiva per processi aziendali su misura.",
+    serviceGestivaTitle: "QualiFlow PMI",
+    serviceGestivaDesc: "Gestionale qualità per PMI: audit, non conformità 8D, checklist, documenti, scadenze, manutenzioni e KPI in un unico cruscotto.",
     servicePrototypeTitle: "Soluzioni su misura",
     servicePrototypeDesc: "Gestionali e web app costruiti sul tuo processo reale, semplici da usare e pronti a crescere con te.",
     skillsEyebrow: "Perché noi",
@@ -318,8 +318,8 @@ const portfolioTranslations = {
     projectQualityDesc: "Gestionale per procedure, controlli, non conformità, audit e documentazione qualità in azienda.",
     projectProductionTitle: "Gestione Produzione",
     projectProductionDesc: "Sistema operativo dedicato a commesse, avanzamento lavori, materiali e report essenziali.",
-    projectGestivaTitle: "gestiva_v1",
-    projectGestivaDesc: "Progetto gestionale dedicato a organizzare clienti, attività, documenti e avanzamenti in un unico spazio operativo personalizzabile.",
+    projectGestivaTitle: "QualiFlow PMI",
+    projectGestivaDesc: "Demo gestionale per il sistema qualità di una PMI: audit, non conformità, checklist ISO/IATF, processi, documenti e scadenze operative.",
     projectStatusService: "Su misura",
     projectShopSitesTitle: "Gestionale su misura",
     projectShopSitesDesc: "Analizziamo come lavori e costruiamo la soluzione che ti serve: dati, documenti, flussi e automazioni su misura.",
@@ -349,7 +349,7 @@ const portfolioTranslations = {
     menuQuality: "Quality management",
     menuDashboard: "Dashboards & KPIs",
     menuProduction: "Production management",
-    menuGestiva: "gestiva_v1",
+    menuGestiva: "QualiFlow PMI",
     menuShopSites: "Custom solutions",
     portfolioEyebrow: "Business management solutions",
     portfolioSubtitle: "We build custom management software and solutions to digitize your business processes: quality, production, documents, jobs and operations always under control.",
@@ -372,8 +372,8 @@ const portfolioTranslations = {
     serviceOpsDesc: "Dashboards for jobs, work progress, priorities, materials and tracking of the key activities.",
     serviceDocsTitle: "Documents & automation",
     serviceDocsDesc: "Tools to manage PDFs, forms and attachments with automation that cuts repetitive work.",
-    serviceGestivaTitle: "gestiva_v1",
-    serviceGestivaDesc: "A modular management tool for tasks, customers, documents and workflows, designed as an evolving base for custom business processes.",
+    serviceGestivaTitle: "QualiFlow PMI",
+    serviceGestivaDesc: "Quality management software for SMEs: audits, 8D non-conformities, checklists, documents, deadlines, maintenance and KPIs in one dashboard.",
     servicePrototypeTitle: "Custom solutions",
     servicePrototypeDesc: "Management tools and web apps built around your real process, easy to use and ready to grow with you.",
     skillsEyebrow: "Why us",
@@ -396,8 +396,8 @@ const portfolioTranslations = {
     projectQualityDesc: "Software for procedures, controls, non-conformities, audits and quality documentation in the company.",
     projectProductionTitle: "Production management",
     projectProductionDesc: "A system dedicated to jobs, work progress, materials and essential reports.",
-    projectGestivaTitle: "gestiva_v1",
-    projectGestivaDesc: "A management project focused on organizing customers, tasks, documents and progress in one customizable operational workspace.",
+    projectGestivaTitle: "QualiFlow PMI",
+    projectGestivaDesc: "A quality-system demo for SMEs: audits, non-conformities, ISO/IATF checklists, processes, documents and operational deadlines.",
     projectStatusService: "Tailored",
     projectShopSitesTitle: "Tailored management software",
     projectShopSitesDesc: "We analyze how you work and build the solution you need: data, documents, workflows and automation made to measure.",
@@ -427,7 +427,7 @@ const portfolioTranslations = {
     menuQuality: "Gestion qualité",
     menuDashboard: "Tableaux de bord & KPI",
     menuProduction: "Gestion production",
-    menuGestiva: "gestiva_v1",
+    menuGestiva: "QualiFlow PMI",
     menuShopSites: "Solutions sur mesure",
     portfolioEyebrow: "Solutions de gestion pour les entreprises",
     portfolioSubtitle: "Nous créons des logiciels de gestion et des solutions sur mesure pour digitaliser vos processus : qualité, production, documents, affaires et opérations toujours sous contrôle.",
@@ -450,8 +450,8 @@ const portfolioTranslations = {
     serviceOpsDesc: "Tableaux de bord pour les affaires, l'avancement, les priorités, les matériaux et le suivi des activités clés.",
     serviceDocsTitle: "Documents & automatisation",
     serviceDocsDesc: "Des outils pour gérer PDF, formulaires et pièces jointes avec des automatisations qui réduisent les tâches répétitives.",
-    serviceGestivaTitle: "gestiva_v1",
-    serviceGestivaDesc: "Un logiciel de gestion modulaire pour activités, clients, documents et flux, conçu comme base évolutive pour des processus sur mesure.",
+    serviceGestivaTitle: "QualiFlow PMI",
+    serviceGestivaDesc: "Logiciel qualité pour PME : audits, non-conformités 8D, checklists, documents, échéances, maintenance et KPI dans un seul tableau de bord.",
     servicePrototypeTitle: "Solutions sur mesure",
     servicePrototypeDesc: "Logiciels de gestion et web apps construits autour de votre processus réel, simples à utiliser et prêts à évoluer.",
     skillsEyebrow: "Pourquoi nous",
@@ -474,8 +474,8 @@ const portfolioTranslations = {
     projectQualityDesc: "Logiciel pour les procédures, contrôles, non-conformités, audits et documentation qualité en entreprise.",
     projectProductionTitle: "Gestion production",
     projectProductionDesc: "Un système dédié aux affaires, à l'avancement, aux matériaux et aux rapports essentiels.",
-    projectGestivaTitle: "gestiva_v1",
-    projectGestivaDesc: "Projet de gestion pour organiser clients, activités, documents et avancements dans un espace opérationnel personnalisable.",
+    projectGestivaTitle: "QualiFlow PMI",
+    projectGestivaDesc: "Démo de système qualité pour PME : audits, non-conformités, checklists ISO/IATF, processus, documents et échéances opérationnelles.",
     projectStatusService: "Sur mesure",
     projectShopSitesTitle: "Logiciel de gestion sur mesure",
     projectShopSitesDesc: "Nous analysons votre façon de travailler et construisons la solution qu'il vous faut : données, documents, flux et automatisations sur mesure.",
@@ -505,7 +505,7 @@ const portfolioTranslations = {
     menuQuality: "Qualitätsmanagement",
     menuDashboard: "Dashboards & KPIs",
     menuProduction: "Produktionsmanagement",
-    menuGestiva: "gestiva_v1",
+    menuGestiva: "QualiFlow PMI",
     menuShopSites: "Individuelle Lösungen",
     portfolioEyebrow: "Management-Lösungen für Unternehmen",
     portfolioSubtitle: "Wir entwickeln individuelle Management-Software und Lösungen, um Ihre Geschäftsprozesse zu digitalisieren: Qualität, Produktion, Dokumente, Aufträge und Abläufe stets im Griff.",
@@ -528,8 +528,8 @@ const portfolioTranslations = {
     serviceOpsDesc: "Dashboards für Aufträge, Arbeitsfortschritt, Prioritäten, Material und das Tracking der wichtigsten Aktivitäten.",
     serviceDocsTitle: "Dokumente & Automatisierung",
     serviceDocsDesc: "Werkzeuge für PDFs, Formulare und Anhänge mit Automatisierungen, die wiederkehrende Arbeit reduzieren.",
-    serviceGestivaTitle: "gestiva_v1",
-    serviceGestivaDesc: "Modulare Management-Software für Aufgaben, Kunden, Dokumente und Abläufe als ausbaufähige Basis für individuelle Geschäftsprozesse.",
+    serviceGestivaTitle: "QualiFlow PMI",
+    serviceGestivaDesc: "Qualitätsmanagement für KMU: Audits, 8D-Abweichungen, Checklisten, Dokumente, Fristen, Wartung und KPIs in einem Dashboard.",
     servicePrototypeTitle: "Individuelle Lösungen",
     servicePrototypeDesc: "Management-Tools und Web-Apps rund um Ihren echten Prozess, einfach zu bedienen und bereit mitzuwachsen.",
     skillsEyebrow: "Warum wir",
@@ -552,8 +552,8 @@ const portfolioTranslations = {
     projectQualityDesc: "Software für Verfahren, Kontrollen, Abweichungen, Audits und Qualitätsdokumentation im Unternehmen.",
     projectProductionTitle: "Produktionsmanagement",
     projectProductionDesc: "Ein System für Aufträge, Arbeitsfortschritt, Material und wesentliche Reports.",
-    projectGestivaTitle: "gestiva_v1",
-    projectGestivaDesc: "Management-Projekt zur Organisation von Kunden, Aufgaben, Dokumenten und Fortschritten in einem anpassbaren Arbeitsbereich.",
+    projectGestivaTitle: "QualiFlow PMI",
+    projectGestivaDesc: "Demo eines Qualitätssystems für KMU: Audits, Abweichungen, ISO/IATF-Checklisten, Prozesse, Dokumente und operative Fristen.",
     projectStatusService: "Maßgeschneidert",
     projectShopSitesTitle: "Individuelle Management-Software",
     projectShopSitesDesc: "Wir analysieren Ihre Arbeitsweise und bauen die passende Lösung: Daten, Dokumente, Abläufe und Automatisierungen nach Maß.",
@@ -583,7 +583,7 @@ const portfolioTranslations = {
     menuQuality: "Gestión de calidad",
     menuDashboard: "Dashboards & KPIs",
     menuProduction: "Gestión de producción",
-    menuGestiva: "gestiva_v1",
+    menuGestiva: "QualiFlow PMI",
     menuShopSites: "Soluciones a medida",
     portfolioEyebrow: "Soluciones de gestión para empresas",
     portfolioSubtitle: "Creamos software de gestión y soluciones a medida para digitalizar tus procesos: calidad, producción, documentos, trabajos y operaciones siempre bajo control.",
@@ -606,8 +606,8 @@ const portfolioTranslations = {
     serviceOpsDesc: "Paneles para trabajos, avance, prioridades, materiales y seguimiento de las actividades clave.",
     serviceDocsTitle: "Documentos & automatización",
     serviceDocsDesc: "Herramientas para gestionar PDF, formularios y adjuntos con automatizaciones que reducen el trabajo repetitivo.",
-    serviceGestivaTitle: "gestiva_v1",
-    serviceGestivaDesc: "Software modular para actividades, clientes, documentos y flujos operativos, pensado como base evolutiva para procesos a medida.",
+    serviceGestivaTitle: "QualiFlow PMI",
+    serviceGestivaDesc: "Software de calidad para pymes: auditorías, no conformidades 8D, checklists, documentos, vencimientos, mantenimiento y KPI en un panel.",
     servicePrototypeTitle: "Soluciones a medida",
     servicePrototypeDesc: "Software de gestión y web apps construidos sobre tu proceso real, fáciles de usar y listos para crecer.",
     skillsEyebrow: "Por qué",
@@ -630,8 +630,8 @@ const portfolioTranslations = {
     projectQualityDesc: "Software para procedimientos, controles, no conformidades, auditorías y documentación de calidad en la empresa.",
     projectProductionTitle: "Gestión de producción",
     projectProductionDesc: "Un sistema dedicado a trabajos, avance, materiales e informes esenciales.",
-    projectGestivaTitle: "gestiva_v1",
-    projectGestivaDesc: "Proyecto de gestión para organizar clientes, actividades, documentos y avances en un único espacio operativo personalizable.",
+    projectGestivaTitle: "QualiFlow PMI",
+    projectGestivaDesc: "Demo de sistema de calidad para pymes: auditorías, no conformidades, checklists ISO/IATF, procesos, documentos y vencimientos.",
     projectStatusService: "A medida",
     projectShopSitesTitle: "Software de gestión a medida",
     projectShopSitesDesc: "Analizamos cómo trabajas y construimos la solución que necesitas: datos, documentos, flujos y automatizaciones a medida.",
@@ -661,7 +661,7 @@ const portfolioTranslations = {
     menuQuality: "质量管理",
     menuDashboard: "仪表盘与 KPI",
     menuProduction: "生产管理",
-    menuGestiva: "gestiva_v1",
+    menuGestiva: "QualiFlow PMI",
     menuShopSites: "定制方案",
     portfolioEyebrow: "面向企业的管理解决方案",
     portfolioSubtitle: "我们打造定制的管理软件与解决方案，让企业流程数字化：质量、生产、文档、订单与运营，一切尽在掌握。",
@@ -684,8 +684,8 @@ const portfolioTranslations = {
     serviceOpsDesc: "面向订单、进度、优先级、物料与关键活动跟踪的仪表盘。",
     serviceDocsTitle: "文档与自动化",
     serviceDocsDesc: "管理 PDF、表单与附件的工具，配合自动化减少重复工作。",
-    serviceGestivaTitle: "gestiva_v1",
-    serviceGestivaDesc: "面向任务、客户、文档与业务流程的模块化管理工具，可作为定制企业流程的可扩展基础。",
+    serviceGestivaTitle: "QualiFlow PMI",
+    serviceGestivaDesc: "面向中小企业的质量管理软件：审计、8D 不合格项、检查表、文档、期限、维护与 KPI 集中在一个仪表盘。",
     servicePrototypeTitle: "定制方案",
     servicePrototypeDesc: "围绕您真实流程打造的管理工具与 Web 应用，易用且可随业务成长。",
     skillsEyebrow: "为什么选我们",
@@ -708,8 +708,8 @@ const portfolioTranslations = {
     projectQualityDesc: "用于企业流程、管控、不合格项、审核与质量文档的软件。",
     projectProductionTitle: "生产管理",
     projectProductionDesc: "专注订单、进度、物料与关键报表的系统。",
-    projectGestivaTitle: "gestiva_v1",
-    projectGestivaDesc: "用于在一个可定制工作空间中管理客户、任务、文档与进度的管理系统项目。",
+    projectGestivaTitle: "QualiFlow PMI",
+    projectGestivaDesc: "面向中小企业质量体系的演示：审计、不合格项、ISO/IATF 检查表、流程、文档与运营期限。",
     projectStatusService: "定制",
     projectShopSitesTitle: "定制管理软件",
     projectShopSitesDesc: "我们分析您的工作方式并打造所需方案：数据、文档、流程与自动化，量身定制。",
@@ -757,6 +757,7 @@ const sourcePanel = document.getElementById("sourcePanel");
 const previewSection = document.getElementById("previewSection");
 const portfolioSection = document.getElementById("portfolioSection");
 const pdfManagerApp = document.getElementById("pdfManagerApp");
+const qualityDemoApp = document.getElementById("qualityDemoApp");
 const finalPreviewFrame = document.getElementById("finalPreviewFrame");
 const pagesGrid = document.getElementById("pagesGrid");
 const sourcePagesGrid = document.getElementById("sourcePagesGrid");
@@ -845,7 +846,7 @@ const pages = {
   home: {
     path: "/",
     title: "ValexLab - Software gestionali e soluzioni su misura per aziende",
-    description: "ValexLab crea gestionali e soluzioni software su misura per qualità, produzione, documenti, automazioni e processi aziendali, incluso gestiva_v1.",
+    description: "ValexLab crea gestionali e soluzioni software su misura per qualità, produzione, documenti, automazioni e processi aziendali, incluso QualiFlow PMI.",
     canonical: "https://valexlab.eu/",
   },
   pdfManager: {
@@ -854,11 +855,21 @@ const pages = {
     description: "PDF Manager online per eliminare pagine, aggiungere pagine da altri PDF, visualizzare l'anteprima finale e salvare il documento modificato direttamente dal browser.",
     canonical: "https://valexlab.eu/pdfmanager",
   },
+  qualityDemo: {
+    path: "/qualiflow",
+    title: "QualiFlow PMI Demo - ValexLab",
+    description: "Demo del gestionale qualità QualiFlow PMI per audit, non conformità 8D, checklist ISO/IATF, documenti, scadenze, manutenzioni e KPI.",
+    canonical: "https://valexlab.eu/qualiflow",
+  },
 };
 
 function normalizePath(pathname) {
   if (pathname === "/pdfmanager" || pathname === "/pdfmanager/") {
     return "/pdfmanager";
+  }
+
+  if (pathname === "/qualiflow" || pathname === "/qualiflow/") {
+    return "/qualiflow";
   }
 
   return "/";
@@ -876,10 +887,12 @@ function setPageMetadata(page) {
 function renderRoute(pathname = window.location.pathname) {
   const path = normalizePath(pathname);
   const isPdfManager = path === "/pdfmanager";
-  const page = isPdfManager ? pages.pdfManager : pages.home;
+  const isQualityDemo = path === "/qualiflow";
+  const page = isPdfManager ? pages.pdfManager : isQualityDemo ? pages.qualityDemo : pages.home;
 
-  portfolioSection.hidden = isPdfManager;
+  portfolioSection.hidden = isPdfManager || isQualityDemo;
   pdfManagerApp.hidden = !isPdfManager;
+  qualityDemoApp.hidden = !isQualityDemo;
   setPageMetadata(page);
 
   navLinks.forEach((link) => {

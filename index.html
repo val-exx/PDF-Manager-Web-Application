@@ -59,7 +59,7 @@
                         <button class="nav-dropdown-toggle" type="button" aria-expanded="false" data-i18n="navProjects">Soluzioni</button>
                         <div class="nav-dropdown-menu">
                             <a href="/pdfmanager" data-route>PDF Manager</a>
-                            <a href="#projects" data-i18n="menuGestiva">gestiva_v1</a>
+                            <a href="/qualiflow" data-route data-i18n="menuGestiva">QualiFlow PMI</a>
                             <a href="#projects" data-i18n="menuQuality">Gestione Qualità</a>
                             <a href="#projects" data-i18n="menuDashboard">Dashboard &amp; KPI</a>
                             <a href="#projects" data-i18n="menuProduction">Gestione Produzione</a>
@@ -213,9 +213,9 @@
                     </article>
 
                     <article class="service-card">
-                        <span class="service-icon">G1</span>
-                        <h3 data-i18n="serviceGestivaTitle">gestiva_v1</h3>
-                        <p data-i18n="serviceGestivaDesc">Gestionale modulare per attività, clienti, documenti e flussi operativi, pensato come base evolutiva per processi aziendali su misura.</p>
+                        <span class="service-icon">QF</span>
+                        <h3 data-i18n="serviceGestivaTitle">QualiFlow PMI</h3>
+                        <p data-i18n="serviceGestivaDesc">Gestionale qualità per PMI: audit, non conformità 8D, checklist, documenti, scadenze, manutenzioni e KPI in un unico cruscotto.</p>
                     </article>
 
                     <article class="service-card">
@@ -291,10 +291,11 @@
                         <p data-i18n="projectProductionDesc">Sistema operativo dedicato a commesse, avanzamento lavori, materiali e report essenziali.</p>
                     </article>
 
-                    <article class="project-card">
-                        <span class="project-status" data-i18n="projectStatusRoadmap">Gestionale</span>
-                        <h3 data-i18n="projectGestivaTitle">gestiva_v1</h3>
-                        <p data-i18n="projectGestivaDesc">Progetto gestionale dedicato a organizzare clienti, attività, documenti e avanzamenti in un unico spazio operativo personalizzabile.</p>
+                    <article class="project-card project-card-active">
+                        <span class="project-status" data-i18n="projectStatusLive">Demo live</span>
+                        <h3 data-i18n="projectGestivaTitle">QualiFlow PMI</h3>
+                        <p data-i18n="projectGestivaDesc">Demo gestionale per il sistema qualità di una PMI: audit, non conformità, checklist ISO/IATF, processi, documenti e scadenze operative.</p>
+                        <a href="/qualiflow" data-route data-i18n="projectOpen">Apri la demo</a>
                     </article>
 
                     <article class="project-card">
@@ -351,6 +352,98 @@
                 <a class="button button-primary" href="#contact" data-i18n="ctaButton">Parliamo del tuo progetto</a>
             </section>
         </section>
+
+        <div id="qualityDemoApp" class="quality-demo-route" hidden>
+            <section class="quality-demo-hero" aria-labelledby="qualityDemoTitle">
+                <div class="quality-demo-copy">
+                    <span class="eyebrow">Demo gestionale qualità</span>
+                    <h1 id="qualityDemoTitle">QualiFlow PMI</h1>
+                    <p>Cruscotto dimostrativo basato sul progetto gestionale sviluppato per PMI automotive: audit, non conformità 8D, checklist, documenti, manutenzioni, formazione e scadenze in un unico ambiente operativo.</p>
+                    <div class="portfolio-actions">
+                        <a class="button button-secondary" href="/" data-route>Torna al portfolio</a>
+                        <a class="button button-primary" href="mailto:info@valexlab.eu">Richiedi una demo completa</a>
+                    </div>
+                </div>
+
+                <div class="quality-login-card">
+                    <span class="project-status">Accessi demo</span>
+                    <h2>Cruscotto qualità</h2>
+                    <p>La demo originale usa login PHP con dati di esempio.</p>
+                    <div class="demo-credentials">
+                        <div><strong>Admin qualità</strong><span>admin@gestiva.local</span></div>
+                        <div><strong>Quality engineer</strong><span>marco@gestiva.local</span></div>
+                        <div><strong>Produzione</strong><span>luca@gestiva.local</span></div>
+                        <div><strong>Password</strong><span>password</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="quality-dashboard" aria-label="QualiFlow PMI dashboard demo">
+                <aside class="quality-sidebar">
+                    <div class="quality-brand"><span>QF</span><strong>QualiFlow PMI</strong><small>Qualità & Audit</small></div>
+                    <nav>
+                        <a class="is-active">Cruscotto</a>
+                        <a>Audit</a>
+                        <a>Non conformità 8D</a>
+                        <a>Checklist ISO/IATF</a>
+                        <a>Processi & KPI</a>
+                        <a>Documenti</a>
+                        <a>Manutenzioni</a>
+                        <a>Formazione</a>
+                    </nav>
+                </aside>
+
+                <div class="quality-main">
+                    <header class="quality-top">
+                        <div>
+                            <span class="eyebrow">PMI Automotive</span>
+                            <h2>Cruscotto qualità</h2>
+                            <p>Indice audit, scadenze, non conformità e indicatori di processo.</p>
+                        </div>
+                        <span class="quality-user">RGQ</span>
+                    </header>
+
+                    <div class="quality-hero-card">
+                        <div class="quality-ring" aria-label="Indice di prontezza audit 86 su 100">
+                            <strong>86</strong>
+                            <span>su 100</span>
+                        </div>
+                        <div>
+                            <span class="project-status">Indice di prontezza audit</span>
+                            <h3>Pronti con punti da consolidare</h3>
+                            <p>Stima sintetica basata su non conformità aperte, tarature, documenti in scadenza e rilievi audit.</p>
+                        </div>
+                    </div>
+
+                    <div class="quality-kpis">
+                        <div><span>NC aperte</span><strong>12</strong><small>3 ad alta priorità</small></div>
+                        <div><span>Audit in corso</span><strong>4</strong><small>follow-up inclusi</small></div>
+                        <div><span>Scadenze 14 gg</span><strong>9</strong><small>2 già in ritardo</small></div>
+                        <div><span>Strumenti da tarare</span><strong>5</strong><small>1 scaduto</small></div>
+                    </div>
+
+                    <div class="quality-panels">
+                        <article>
+                            <h3>Prossime scadenze</h3>
+                            <ul class="quality-timeline">
+                                <li><span></span><div><strong>Audit interno processo saldatura</strong><small>Audit · 20 giugno 2026</small></div></li>
+                                <li><span></span><div><strong>Taratura calibro digitale CD-014</strong><small>Taratura · 24 giugno 2026</small></div></li>
+                                <li><span></span><div><strong>Riesame manuale qualità</strong><small>Documento · 30 giugno 2026</small></div></li>
+                            </ul>
+                        </article>
+                        <article>
+                            <h3>Azioni rapide</h3>
+                            <div class="quality-actions-grid">
+                                <button>Apri non conformità</button>
+                                <button>Pianifica audit</button>
+                                <button>Avvia checklist</button>
+                                <button>Nuova scadenza</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
 
         <div id="pdfManagerApp" class="pdf-manager-route" hidden>
         <section class="hero-panel" aria-labelledby="appTitle">
