@@ -1,0 +1,9 @@
+services:
+  gestiva:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./storage:/app/storage
+      - ./public/uploads:/app/public/uploads
+    restart: unless-stopped

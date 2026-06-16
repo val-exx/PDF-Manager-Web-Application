@@ -1,0 +1,8 @@
+# Deploy su Render.com (demo SQLite)
+services:
+  - type: web
+    name: qualiflow-pmi
+    runtime: docker
+    plan: free
+    autoDeploy: false
+    healthCheckPath: /index.php?page=login

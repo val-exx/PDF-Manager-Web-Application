@@ -1,0 +1,6 @@
+storage/*.sqlite
+storage/*.log
+public/uploads/*
+!public/uploads/README.txt
+.git
+.DS_Store

@@ -1,0 +1,6 @@
+/storage/*.sqlite
+/storage/*.log
+/public/uploads/*
+!/public/uploads/.htaccess
+!/public/uploads/README.txt
+.DS_Store
