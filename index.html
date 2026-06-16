@@ -3,15 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ValexLab e un portfolio di applicazioni web, strumenti gestionali e prototipi digitali per piccole e medie imprese.">
+    <meta name="description" content="ValexLab: software gestionali e soluzioni su misura per digitalizzare i processi delle aziende. Qualità, produzione, documenti e automazioni.">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="ValexLab - Portfolio di applicazioni web">
-    <meta property="og:description" content="Portfolio di progetti web, PDF tools e sistemi gestionali per PMI.">
+    <meta property="og:title" content="ValexLab - Software gestionali e soluzioni su misura per aziende">
+    <meta property="og:description" content="Gestionali e soluzioni software su misura: qualità, produzione, documenti, commesse e automazioni per la tua azienda.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://valexlab.eu/">
-    <meta name="theme-color" content="#c8ecff">
-    <title>ValexLab - Portfolio di applicazioni web</title>
+    <meta name="theme-color" content="#eaf5ff">
+    <title>ValexLab - Software gestionali e soluzioni su misura per aziende</title>
     <link rel="canonical" href="https://valexlab.eu/">
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem("valexlab-theme");
+                if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+                document.documentElement.setAttribute("data-theme", t);
+            } catch (e) {}
+        })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -41,22 +53,26 @@
             <div class="topbar-actions">
                 <nav class="site-nav" aria-label="Main navigation">
                     <a href="#home" data-i18n="navHome">Home</a>
-                    <a href="#about" data-i18n="navAbout">About</a>
-                    <a href="#skills" data-i18n="navSkills">Skills</a>
+                    <a href="#about" data-i18n="navAbout">Studio</a>
+                    <a href="#skills" data-i18n="navSkills">Perché noi</a>
                     <div class="nav-dropdown">
-                        <button class="nav-dropdown-toggle" type="button" aria-expanded="false" data-i18n="navProjects">
-                            Project
-                        </button>
+                        <button class="nav-dropdown-toggle" type="button" aria-expanded="false" data-i18n="navProjects">Soluzioni</button>
                         <div class="nav-dropdown-menu">
                             <a href="/pdfmanager" data-route>PDF Manager</a>
-                            <a href="#projects" data-i18n="menuQuality">Gestionale Qualita</a>
-                            <a href="#projects" data-i18n="menuDashboard">Dashboard PMI</a>
+                            <a href="#projects" data-i18n="menuGestiva">gestiva_v1</a>
+                            <a href="#projects" data-i18n="menuQuality">Gestione Qualità</a>
+                            <a href="#projects" data-i18n="menuDashboard">Dashboard &amp; KPI</a>
                             <a href="#projects" data-i18n="menuProduction">Gestione Produzione</a>
-                            <a href="#projects" data-i18n="menuShopSites">Siti web negozi</a>
+                            <a href="#projects" data-i18n="menuShopSites">Soluzioni su misura</a>
                         </div>
                     </div>
                     <a href="#contact" data-i18n="navContact">Contatti</a>
                 </nav>
+
+                <button class="theme-toggle" type="button" aria-label="Cambia tema" title="Cambia tema chiaro/scuro">
+                    <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+                    <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+                </button>
 
                 <div class="language-dropdown">
                     <button class="language-toggle" type="button" aria-expanded="false" aria-label="Seleziona lingua">
@@ -101,105 +117,111 @@
                 </div>
 
                 <div class="portfolio-copy">
-                    <span class="eyebrow" data-i18n="portfolioEyebrow">Business tools for PMI</span>
+                    <span class="eyebrow" data-i18n="portfolioEyebrow">Soluzioni gestionali per aziende</span>
                     <h1 id="portfolioTitle">ValexLab</h1>
-                    <p data-i18n="portfolioSubtitle">Portfolio di applicazioni web e prototipi gestionali per piccole e medie imprese: strumenti chiari per qualita, produzione, documenti, commesse e flussi operativi.</p>
+                    <p data-i18n="portfolioSubtitle">Creiamo gestionali e soluzioni software su misura per digitalizzare i processi aziendali: qualità, produzione, documenti, commesse e flussi operativi sempre sotto controllo.</p>
                     <div class="portfolio-actions">
-                        <a class="button button-primary" href="/pdfmanager" data-route data-i18n="portfolioOpenPdf">Apri PDF Manager</a>
-                        <a class="button button-secondary" href="#services" data-i18n="portfolioExploreServices">Esplora i servizi</a>
+                        <a class="button button-primary" href="#contact" data-i18n="portfolioOpenPdf">Richiedi una demo</a>
+                        <a class="button button-secondary" href="#services" data-i18n="portfolioExploreServices">Le soluzioni</a>
                     </div>
 
                     <div class="hero-metrics" aria-label="ValexLab focus areas">
                         <div>
                             <strong>01</strong>
-                            <span data-i18n="metricTool">Tool pubblicato</span>
+                            <span data-i18n="metricTool">Demo live online</span>
                         </div>
                         <div>
-                            <strong>04</strong>
+                            <strong>05</strong>
                             <span data-i18n="metricAreas">Aree gestionali</span>
                         </div>
                         <div>
                             <strong>100%</strong>
-                            <span data-i18n="metricClientSide">Client-side PDF</span>
+                            <span data-i18n="metricClientSide">Su misura</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="portfolio-panel">
-                    <div class="console-card">
-                        <div class="console-topbar">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <strong>process.flow</strong>
+                    <div class="doc-mock" aria-hidden="true">
+                        <div class="doc-mock__bar">
+                            <i></i><i></i><i></i>
+                            <strong>PDF Manager</strong>
                         </div>
-                        <div class="code-snippet">
-                            <span data-i18n="codeLine1"><b>const</b> pmi = "processi reali";</span>
-                            <span data-i18n="codeLine2"><b>map</b>(flussi, dati, documenti);</span>
-                            <span data-i18n="codeLine3"><b>build</b>("prototipo operativo");</span>
-                            <span data-i18n="codeLine4"><b>release</b>("strumento semplice");</span>
+                        <div class="doc-mock__body">
+                            <div class="doc-mock__page"></div>
+                            <div class="doc-mock__page is-sel"></div>
+                            <div class="doc-mock__page"></div>
+                            <div class="doc-mock__page"></div>
+                            <div class="doc-mock__page is-sel"></div>
+                            <div class="doc-mock__page"></div>
+                        </div>
+                        <div class="doc-mock__foot">
+                            <span class="doc-mock__chip">6 pagine</span>
+                            <span class="doc-mock__chip mint">2 selezionate</span>
                         </div>
                     </div>
 
                     <div class="floating-badge badge-1">
-                        <strong>QA</strong>
-                        <span data-i18n="badgeQuality">procedure & controlli</span>
+                        <strong>Qualità</strong>
+                        <span data-i18n="badgeQuality">procedure e controlli</span>
                     </div>
                     <div class="floating-badge badge-2">
-                        <strong>OPS</strong>
-                        <span data-i18n="badgeOps">commesse & produzione</span>
+                        <strong>Produzione</strong>
+                        <span data-i18n="badgeOps">commesse e produzione</span>
                     </div>
                     <div class="floating-badge badge-3">
-                        <strong>DOC</strong>
-                        <span data-i18n="badgeDocs">PDF & automazioni</span>
+                        <strong>Documenti</strong>
+                        <span data-i18n="badgeDocs">PDF e automazioni</span>
                     </div>
                 </div>
             </div>
 
             <section id="about" class="about-section" aria-labelledby="aboutTitle">
                 <div>
-                    <span class="eyebrow" data-i18n="aboutEyebrow">About</span>
-                    <h2 id="aboutTitle" data-i18n="aboutTitle">Soluzioni digitali chiare per processi aziendali reali.</h2>
+                    <span class="eyebrow" data-i18n="aboutEyebrow">Lo studio</span>
+                    <h2 id="aboutTitle" data-i18n="aboutTitle">Software gestionali su misura per processi aziendali reali.</h2>
                 </div>
-                <p data-i18n="aboutDesc">
-                    ValexLab e un portfolio dedicato a tool web e sistemi gestionali per PMI: qualita,
-                    documentazione, produzione, dashboard operative e piccoli automatismi costruiti per
-                    semplificare il lavoro quotidiano.
-                </p>
+                <p data-i18n="aboutDesc">ValexLab progetta e sviluppa gestionali e soluzioni software per le aziende: qualità, documentazione, produzione, dashboard operative e automazioni costruite per semplificare il lavoro di ogni giorno.</p>
             </section>
 
             <section id="services" class="services-section" aria-labelledby="servicesTitle">
                 <div class="section-heading">
                     <span class="section-number">01</span>
                     <div>
-                        <span class="eyebrow" data-i18n="servicesEyebrow">Services</span>
-                        <h2 id="servicesTitle" data-i18n="servicesTitle">Servizi digitali per gestionali PMI</h2>
+                        <span class="eyebrow" data-i18n="servicesEyebrow">Soluzioni</span>
+                        <h2 id="servicesTitle" data-i18n="servicesTitle">Soluzioni gestionali per la tua azienda</h2>
                     </div>
                 </div>
 
                 <div class="service-grid">
                     <article class="service-card">
                         <span class="service-icon">QA</span>
-                        <h3 data-i18n="serviceQualityTitle">Qualita e documentazione</h3>
-                        <p data-i18n="serviceQualityDesc">Procedure, checklist, non conformita, audit interni e archivi documentali consultabili in modo ordinato.</p>
+                        <h3 data-i18n="serviceQualityTitle">Qualità &amp; documentazione</h3>
+                        <p data-i18n="serviceQualityDesc">Procedure, checklist, non conformità, audit interni e archivi documentali consultabili in modo ordinato.</p>
                     </article>
 
                     <article class="service-card">
-                        <span class="service-icon">OP</span>
-                        <h3 data-i18n="serviceOpsTitle">Produzione e operativita</h3>
-                        <p data-i18n="serviceOpsDesc">Dashboard per commesse, avanzamento lavorazioni, priorita, materiali e tracciamento delle attivita chiave.</p>
+                        <span class="service-icon">OPS</span>
+                        <h3 data-i18n="serviceOpsTitle">Produzione &amp; commesse</h3>
+                        <p data-i18n="serviceOpsDesc">Dashboard per commesse, avanzamento lavorazioni, priorità, materiali e tracciamento delle attività chiave.</p>
                     </article>
 
                     <article class="service-card">
                         <span class="service-icon">DOC</span>
-                        <h3 data-i18n="serviceDocsTitle">Documenti e automazioni</h3>
-                        <p data-i18n="serviceDocsDesc">Tool per gestire PDF, moduli, allegati e piccoli automatismi che riducono lavoro ripetitivo.</p>
+                        <h3 data-i18n="serviceDocsTitle">Documenti &amp; automazioni</h3>
+                        <p data-i18n="serviceDocsDesc">Strumenti per gestire PDF, moduli e allegati con automazioni che riducono il lavoro ripetitivo.</p>
                     </article>
 
                     <article class="service-card">
-                        <span class="service-icon">UX</span>
-                        <h3 data-i18n="servicePrototypeTitle">Prototipi su misura</h3>
-                        <p data-i18n="servicePrototypeDesc">Interfacce rapide da testare con utenti reali prima di investire in un gestionale completo.</p>
+                        <span class="service-icon">G1</span>
+                        <h3 data-i18n="serviceGestivaTitle">gestiva_v1</h3>
+                        <p data-i18n="serviceGestivaDesc">Gestionale modulare per attività, clienti, documenti e flussi operativi, pensato come base evolutiva per processi aziendali su misura.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <span class="service-icon">FIT</span>
+                        <h3 data-i18n="servicePrototypeTitle">Soluzioni su misura</h3>
+                        <p data-i18n="servicePrototypeDesc">Gestionali e web app costruiti sul tuo processo reale, semplici da usare e pronti a crescere con te.</p>
                     </article>
                 </div>
             </section>
@@ -208,34 +230,34 @@
                 <div class="section-heading">
                     <span class="section-number">02</span>
                     <div>
-                        <span class="eyebrow" data-i18n="skillsEyebrow">Skills</span>
-                        <h2 id="skillsTitle" data-i18n="skillsTitle">Competenze per gestionali moderni e facili da usare</h2>
+                        <span class="eyebrow" data-i18n="skillsEyebrow">Perché noi</span>
+                        <h2 id="skillsTitle" data-i18n="skillsTitle">Perché scegliere ValexLab</h2>
                     </div>
                 </div>
 
                 <div class="skills-grid">
                     <article class="skill-card">
                         <span>01</span>
-                        <h3 data-i18n="skillProcessTitle">Analisi processi</h3>
-                        <p data-i18n="skillProcessDesc">Mappatura di ruoli, dati, documenti e punti critici prima di progettare l'interfaccia.</p>
+                        <h3 data-i18n="skillProcessTitle">Analisi dei processi</h3>
+                        <p data-i18n="skillProcessDesc">Mappiamo ruoli, dati, documenti e punti critici prima di costruire la soluzione.</p>
                     </article>
 
                     <article class="skill-card">
                         <span>02</span>
-                        <h3 data-i18n="skillWebTitle">Web app operative</h3>
-                        <p data-i18n="skillWebDesc">Schermate responsive, leggere e orientate a chi deve lavorare in modo rapido.</p>
+                        <h3 data-i18n="skillWebTitle">Software su misura</h3>
+                        <p data-i18n="skillWebDesc">Gestionali leggeri, veloci e responsive, pensati per chi lavora ogni giorno.</p>
                     </article>
 
                     <article class="skill-card">
                         <span>03</span>
-                        <h3 data-i18n="skillDashboardTitle">Dashboard e KPI</h3>
-                        <p data-i18n="skillDashboardDesc">Vista sintetica di avanzamenti, priorita, controlli e indicatori utili alla gestione.</p>
+                        <h3 data-i18n="skillDashboardTitle">Dashboard &amp; KPI</h3>
+                        <p data-i18n="skillDashboardDesc">Avanzamenti, priorità, controlli e indicatori utili alla gestione, sempre sott'occhio.</p>
                     </article>
 
                     <article class="skill-card">
                         <span>04</span>
-                        <h3 data-i18n="skillWorkflowTitle">Workflow documentali</h3>
-                        <p data-i18n="skillWorkflowDesc">Gestione di PDF, revisioni, allegati e procedure con passaggi semplici e tracciabili.</p>
+                        <h3 data-i18n="skillWorkflowTitle">Assistenza continua</h3>
+                        <p data-i18n="skillWorkflowDesc">Un partner di riferimento per aggiornamenti, modifiche e supporto nel tempo.</p>
                     </article>
                 </div>
             </section>
@@ -244,35 +266,41 @@
                 <div class="section-heading">
                     <span class="section-number">03</span>
                     <div>
-                        <span class="eyebrow" data-i18n="projectsEyebrow">Projects</span>
-                        <h2 id="projectsTitle" data-i18n="projectsTitle">Progetti in evidenza</h2>
+                        <span class="eyebrow" data-i18n="projectsEyebrow">Soluzioni</span>
+                        <h2 id="projectsTitle" data-i18n="projectsTitle">Soluzioni e demo</h2>
                     </div>
                 </div>
 
                 <div class="project-grid">
                     <article class="project-card project-card-active">
-                        <span class="project-status" data-i18n="projectStatusLive">Live tool</span>
+                        <span class="project-status" data-i18n="projectStatusLive">Demo live</span>
                         <h3>PDF Manager</h3>
-                        <p data-i18n="projectPdfDesc">Gestisci PDF direttamente nel browser: elimina pagine, importa pagine da altri documenti, scegli dove inserirle e scarica il file finale.</p>
-                        <a href="/pdfmanager" data-route data-i18n="projectOpen">Apri progetto</a>
+                        <p data-i18n="projectPdfDesc">Web app che gestisce i PDF direttamente nel browser: elimina e riordina pagine, importa da altri documenti e scarica il file finale. Una demo delle nostre soluzioni su misura.</p>
+                        <a href="/pdfmanager" data-route data-i18n="projectOpen">Apri la demo</a>
                     </article>
 
                     <article class="project-card">
-                        <span class="project-status" data-i18n="projectStatusRoadmap">Roadmap</span>
-                        <h3 data-i18n="projectQualityTitle">Gestione Qualita</h3>
-                        <p data-i18n="projectQualityDesc">Prototipo per procedure, controlli, non conformita, audit e documentazione qualita nelle PMI.</p>
+                        <span class="project-status" data-i18n="projectStatusRoadmap">Gestionale</span>
+                        <h3 data-i18n="projectQualityTitle">Gestione Qualità</h3>
+                        <p data-i18n="projectQualityDesc">Gestionale per procedure, controlli, non conformità, audit e documentazione qualità in azienda.</p>
                     </article>
 
                     <article class="project-card">
-                        <span class="project-status" data-i18n="projectStatusRoadmap">Roadmap</span>
+                        <span class="project-status" data-i18n="projectStatusRoadmap">Gestionale</span>
                         <h3 data-i18n="projectProductionTitle">Gestione Produzione</h3>
-                        <p data-i18n="projectProductionDesc">Spazio per un sistema operativo dedicato a commesse, avanzamento lavori, materiali e report essenziali.</p>
+                        <p data-i18n="projectProductionDesc">Sistema operativo dedicato a commesse, avanzamento lavori, materiali e report essenziali.</p>
                     </article>
 
                     <article class="project-card">
-                        <span class="project-status" data-i18n="projectStatusService">Servizio</span>
-                        <h3 data-i18n="projectShopSitesTitle">Siti web per piccoli negozi</h3>
-                        <p data-i18n="projectShopSitesDesc">Supporto per creare e gestire siti web professionali: dominio, hosting, frontend, backend, contenuti e manutenzione del sito.</p>
+                        <span class="project-status" data-i18n="projectStatusRoadmap">Gestionale</span>
+                        <h3 data-i18n="projectGestivaTitle">gestiva_v1</h3>
+                        <p data-i18n="projectGestivaDesc">Progetto gestionale dedicato a organizzare clienti, attività, documenti e avanzamenti in un unico spazio operativo personalizzabile.</p>
+                    </article>
+
+                    <article class="project-card">
+                        <span class="project-status" data-i18n="projectStatusService">Su misura</span>
+                        <h3 data-i18n="projectShopSitesTitle">Gestionale su misura</h3>
+                        <p data-i18n="projectShopSitesDesc">Analizziamo come lavori e costruiamo la soluzione che ti serve: dati, documenti, flussi e automazioni su misura.</p>
                     </article>
                 </div>
             </section>
@@ -281,26 +309,26 @@
                 <div class="section-heading">
                     <span class="section-number">04</span>
                     <div>
-                        <span class="eyebrow" data-i18n="methodEyebrow">Method</span>
-                        <h2 id="workflowTitle" data-i18n="methodTitle">Dal problema al prototipo</h2>
+                        <span class="eyebrow" data-i18n="methodEyebrow">Metodo</span>
+                        <h2 id="workflowTitle" data-i18n="methodTitle">Come lavoriamo</h2>
                     </div>
                 </div>
 
                 <div class="workflow-list">
                     <div class="workflow-item">
                         <span>01</span>
-                        <h3 data-i18n="workflowMapTitle">Mappatura del flusso</h3>
-                        <p data-i18n="workflowMapDesc">Capire chi usa il sistema, quali dati servono e dove si perdono tempo o informazioni.</p>
+                        <h3 data-i18n="workflowMapTitle">Analisi &amp; preventivo</h3>
+                        <p data-i18n="workflowMapDesc">Capiamo chi usa il sistema, quali dati servono e dove si perde tempo, con un preventivo chiaro.</p>
                     </div>
                     <div class="workflow-item">
                         <span>02</span>
-                        <h3 data-i18n="workflowUiTitle">Interfaccia operativa</h3>
-                        <p data-i18n="workflowUiDesc">Costruire schermate semplici, dense quanto basta e pronte per essere provate sul processo reale.</p>
+                        <h3 data-i18n="workflowUiTitle">Sviluppo &amp; test</h3>
+                        <p data-i18n="workflowUiDesc">Costruiamo la soluzione e la proviamo sul processo reale, raccogliendo il tuo feedback.</p>
                     </div>
                     <div class="workflow-item">
                         <span>03</span>
-                        <h3 data-i18n="workflowReleaseTitle">Iterazione e rilascio</h3>
-                        <p data-i18n="workflowReleaseDesc">Migliorare il prototipo con feedback pratici fino ad arrivare a uno strumento stabile.</p>
+                        <h3 data-i18n="workflowReleaseTitle">Rilascio &amp; supporto</h3>
+                        <p data-i18n="workflowReleaseDesc">Mettiamo online lo strumento e restiamo al tuo fianco con aggiornamenti e assistenza.</p>
                     </div>
                 </div>
             </section>
@@ -308,19 +336,19 @@
             <section id="contact" class="contact-section" aria-labelledby="contactTitle">
                 <div>
                     <span class="eyebrow" data-i18n="contactEyebrow">Contatti</span>
-                    <h2 id="contactTitle" data-i18n="contactTitle">Hai un processo da trasformare in gestionale?</h2>
-                    <p data-i18n="contactDesc">Questa sezione e pronta per raccogliere richieste, demo e nuove idee di progetto per ValexLab.</p>
+                    <h2 id="contactTitle" data-i18n="contactTitle">Hai un processo da digitalizzare?</h2>
+                    <p data-i18n="contactDesc">Raccontaci come lavori: ti proponiamo la soluzione gestionale più adatta, con una demo e un preventivo su misura.</p>
                 </div>
-                <a class="button button-primary" href="mailto:info@valexlab.eu" data-i18n="contactButton">Scrivi a ValexLab</a>
+                <a class="button button-primary" href="mailto:info@valexlab.eu" data-i18n="contactButton">Richiedi una demo</a>
             </section>
 
             <section class="portfolio-cta" aria-labelledby="ctaTitle">
                 <div>
-                    <span class="eyebrow" data-i18n="ctaEyebrow">Next</span>
-                    <h2 id="ctaTitle" data-i18n="ctaTitle">Un portfolio che crescera progetto dopo progetto.</h2>
-                    <p data-i18n="ctaDesc">PDF Manager e il primo tassello. Le prossime aree saranno dedicate a qualita, produzione, magazzino e processi gestionali per PMI.</p>
+                    <span class="eyebrow" data-i18n="ctaEyebrow">Iniziamo</span>
+                    <h2 id="ctaTitle" data-i18n="ctaTitle">La tua prossima soluzione gestionale inizia qui.</h2>
+                    <p data-i18n="ctaDesc">Dal primo tool a un gestionale completo, ValexLab digitalizza e semplifica i processi della tua azienda.</p>
                 </div>
-                <a class="button button-primary" href="/pdfmanager" data-route data-i18n="ctaButton">Prova il primo tool</a>
+                <a class="button button-primary" href="#contact" data-i18n="ctaButton">Parliamo del tuo progetto</a>
             </section>
         </section>
 
