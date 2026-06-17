@@ -348,11 +348,9 @@ html[data-theme="dark"] .theme-toggle__moon { display: block; }
 }
 
 .portfolio-shell,
-.pdf-manager-route,
-.quality-demo-route { display: grid; gap: 24px; }
+.pdf-manager-route { display: grid; gap: 24px; }
 .portfolio-shell[hidden],
-.pdf-manager-route[hidden],
-.quality-demo-route[hidden] { display: none; }
+.pdf-manager-route[hidden] { display: none; }
 
 /* --------------------------------------------------------------------------
    Portfolio hero
@@ -763,335 +761,6 @@ html[data-theme="dark"] .theme-toggle__moon { display: block; }
 .project-card a:hover::after { transform: translateX(4px); }
 
 /* --------------------------------------------------------------------------
-   QualiFlow PMI demo
-   -------------------------------------------------------------------------- */
-.quality-demo-route {
-    width: min(100%, 1380px);
-    justify-self: center;
-}
-
-.quality-demo-hero,
-.quality-dashboard {
-    position: relative;
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    border-radius: var(--r-xl);
-    background: var(--glass);
-    box-shadow: var(--shadow);
-    backdrop-filter: blur(20px) saturate(150%);
-    -webkit-backdrop-filter: blur(20px) saturate(150%);
-}
-
-.quality-demo-hero {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(300px, 420px);
-    gap: 28px;
-    align-items: center;
-    padding: clamp(28px, 4vw, 48px);
-}
-
-.quality-demo-copy h1 {
-    margin-bottom: 16px;
-    font-size: clamp(2.4rem, 5vw, 4.6rem);
-    background: var(--grad-ink);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
-.quality-demo-copy p,
-.quality-login-card p {
-    color: var(--ink-soft);
-    line-height: 1.7;
-}
-
-.quality-login-card {
-    display: grid;
-    gap: 14px;
-    padding: 24px;
-    border: 1px solid var(--line);
-    border-radius: var(--r-lg);
-    background: rgba(255, 255, 255, 0.82);
-    box-shadow: var(--shadow-sm);
-}
-
-.quality-login-card h2 {
-    margin-bottom: 0;
-    font-size: 1.7rem;
-}
-
-.demo-credentials {
-    display: grid;
-    gap: 10px;
-}
-
-.demo-credentials div {
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 11px 12px;
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    background: rgba(234, 245, 255, 0.75);
-}
-
-.demo-credentials strong,
-.demo-credentials span {
-    min-width: 0;
-    font-size: 0.84rem;
-}
-
-.demo-credentials span {
-    color: var(--muted);
-    overflow-wrap: anywhere;
-}
-
-.quality-dashboard {
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: 260px minmax(0, 1fr);
-    min-height: 760px;
-    background: rgba(255, 255, 255, 0.52);
-}
-
-.quality-sidebar {
-    display: grid;
-    align-content: space-between;
-    gap: 28px;
-    padding: 24px;
-    border-right: 1px solid var(--line);
-    background: rgba(12, 28, 52, 0.96);
-    color: #eaf2ff;
-}
-
-.quality-brand {
-    display: grid;
-    gap: 4px;
-}
-
-.quality-brand span {
-    display: grid;
-    width: 44px;
-    height: 44px;
-    margin-bottom: 8px;
-    place-items: center;
-    border-radius: 14px;
-    background: var(--grad-brand);
-    font-family: var(--display);
-    font-weight: 800;
-}
-
-.quality-brand strong {
-    font-family: var(--display);
-    font-size: 1.02rem;
-}
-
-.quality-brand small {
-    color: rgba(234, 242, 255, 0.66);
-    font-weight: 700;
-}
-
-.quality-sidebar nav {
-    display: grid;
-    gap: 8px;
-}
-
-.quality-sidebar a {
-    padding: 10px 12px;
-    border-radius: 12px;
-    color: rgba(234, 242, 255, 0.76);
-    font-size: 0.9rem;
-    font-weight: 750;
-}
-
-.quality-sidebar a.is-active,
-.quality-sidebar a:hover {
-    color: #fff;
-    background: rgba(89, 210, 255, 0.14);
-}
-
-.quality-main {
-    display: grid;
-    align-content: start;
-    gap: 20px;
-    padding: clamp(22px, 3vw, 34px);
-}
-
-.quality-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.quality-top h2 {
-    margin-bottom: 8px;
-    font-size: clamp(1.8rem, 3.5vw, 3rem);
-}
-
-.quality-top p {
-    margin-bottom: 0;
-    color: var(--ink-soft);
-}
-
-.quality-user {
-    display: grid;
-    width: 48px;
-    height: 48px;
-    place-items: center;
-    flex: 0 0 auto;
-    border-radius: 999px;
-    color: #fff;
-    background: var(--grad-brand);
-    font-weight: 900;
-    box-shadow: var(--shadow-blue);
-}
-
-.quality-hero-card,
-.quality-kpis > div,
-.quality-panels article {
-    border: 1px solid var(--line);
-    border-radius: var(--r-lg);
-    background: rgba(255, 255, 255, 0.82);
-    box-shadow: var(--shadow-sm);
-}
-
-.quality-hero-card {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
-    gap: 24px;
-    align-items: center;
-    padding: 24px;
-}
-
-.quality-hero-card h3 {
-    margin-bottom: 8px;
-    font-size: 1.45rem;
-}
-
-.quality-hero-card p {
-    margin-bottom: 0;
-    color: var(--ink-soft);
-}
-
-.quality-ring {
-    position: relative;
-    display: grid;
-    width: 148px;
-    height: 148px;
-    place-items: center;
-    border-radius: 999px;
-    background:
-        radial-gradient(circle at center, rgba(255, 255, 255, 0.96) 0 55%, transparent 56%),
-        conic-gradient(var(--mint) 0 86%, rgba(10, 109, 240, 0.12) 86% 100%);
-    box-shadow: var(--shadow-sm);
-}
-
-.quality-ring strong {
-    display: block;
-    color: var(--ink);
-    font-family: var(--display);
-    font-size: 2.6rem;
-    line-height: 1;
-}
-
-.quality-ring span {
-    margin-top: -36px;
-    color: var(--muted);
-    font-size: 0.78rem;
-    font-weight: 800;
-}
-
-.quality-kpis {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 14px;
-}
-
-.quality-kpis > div {
-    display: grid;
-    gap: 8px;
-    padding: 18px;
-}
-
-.quality-kpis span,
-.quality-kpis small {
-    color: var(--muted);
-    font-weight: 750;
-}
-
-.quality-kpis strong {
-    color: var(--ink);
-    font-family: var(--display);
-    font-size: 2rem;
-    line-height: 1;
-}
-
-.quality-panels {
-    display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
-    gap: 14px;
-}
-
-.quality-panels article {
-    padding: 22px;
-}
-
-.quality-panels h3 {
-    margin-bottom: 16px;
-    font-size: 1.18rem;
-}
-
-.quality-timeline {
-    display: grid;
-    gap: 14px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.quality-timeline li {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
-    gap: 12px;
-    align-items: start;
-}
-
-.quality-timeline li > span {
-    width: 12px;
-    height: 12px;
-    margin-top: 6px;
-    border-radius: 999px;
-    background: var(--primary);
-    box-shadow: 0 0 0 6px rgba(10, 109, 240, 0.12);
-}
-
-.quality-timeline strong {
-    display: block;
-    margin-bottom: 3px;
-}
-
-.quality-timeline small {
-    color: var(--muted);
-    font-weight: 700;
-}
-
-.quality-actions-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
-}
-
-.quality-actions-grid button {
-    min-height: 64px;
-    padding: 12px;
-    border-radius: 14px;
-    color: var(--primary-dk);
-    background: rgba(10, 109, 240, 0.08);
-    font-weight: 850;
-    text-align: left;
-}
-
-/* --------------------------------------------------------------------------
    Workflow / Method
    -------------------------------------------------------------------------- */
 .workflow-list {
@@ -1403,10 +1072,6 @@ html[data-theme="dark"] .theme-toggle__moon { display: block; }
     .hero-panel, .portfolio-hero { gap: 28px; }
     .service-grid, .skills-grid { grid-template-columns: repeat(2, 1fr); }
     .project-grid { grid-template-columns: repeat(2, 1fr); }
-    .quality-demo-hero, .quality-dashboard, .quality-panels { grid-template-columns: 1fr; }
-    .quality-sidebar { border-right: 0; border-bottom: 1px solid var(--line); }
-    .quality-sidebar nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .quality-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .workflow-list { grid-template-columns: 1fr; }
     .portfolio-cta, .contact-section { grid-template-columns: 1fr; }
     .portfolio-panel { min-height: 420px; order: -1; }
@@ -1445,7 +1110,7 @@ html[data-theme="dark"] .theme-toggle__moon { display: block; }
 
     .hero-panel, .portfolio-hero, .about-section, .projects-section,
     .skills-section, .services-section, .workflow-section, .contact-section,
-    .portfolio-cta, .workspace, .preview-section, .quality-demo-hero { padding: 22px; border-radius: 26px; }
+    .portfolio-cta, .workspace, .preview-section { padding: 22px; border-radius: 26px; }
 
     .portfolio-copy h1 { font-size: clamp(2.6rem, 13vw, 3.6rem); }
 
@@ -1453,10 +1118,6 @@ html[data-theme="dark"] .theme-toggle__moon { display: block; }
     .button, .insert-control { width: 100%; }
 
     .hero-metrics { grid-template-columns: 1fr 1fr; }
-    .quality-sidebar nav, .quality-kpis, .quality-actions-grid { grid-template-columns: 1fr; }
-    .quality-hero-card { grid-template-columns: 1fr; }
-    .quality-ring { width: 132px; height: 132px; }
-
     .portfolio-panel { min-height: 360px; padding: 12px; }
     .doc-mock { width: min(300px, 86%); }
 
@@ -1545,10 +1206,6 @@ html[data-theme="dark"] .hero-metrics div,
 html[data-theme="dark"] .service-card,
 html[data-theme="dark"] .skill-card,
 html[data-theme="dark"] .project-card,
-html[data-theme="dark"] .quality-login-card,
-html[data-theme="dark"] .quality-hero-card,
-html[data-theme="dark"] .quality-kpis > div,
-html[data-theme="dark"] .quality-panels article,
 html[data-theme="dark"] .workflow-item { background: rgba(255, 255, 255, 0.045); }
 html[data-theme="dark"] .project-card-active {
     background: radial-gradient(circle at 100% 0%, rgba(89, 210, 255, 0.16), transparent 50%), rgba(255, 255, 255, 0.07);
@@ -1565,16 +1222,6 @@ html[data-theme="dark"] .doc-mock { background: rgba(22, 40, 64, 0.94); border-c
 html[data-theme="dark"] .doc-mock__page { background: linear-gradient(160deg, #16314f, #0f2238); border-color: rgba(255, 255, 255, 0.08); }
 html[data-theme="dark"] .doc-mock__chip { background: rgba(89, 210, 255, 0.14); color: #9cc9ff; }
 html[data-theme="dark"] .floating-badge { background: rgba(18, 36, 58, 0.94); border-color: rgba(255, 255, 255, 0.12); }
-html[data-theme="dark"] .quality-dashboard,
-html[data-theme="dark"] .quality-demo-hero { border-color: rgba(255, 255, 255, 0.08); }
-html[data-theme="dark"] .demo-credentials div { background: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.10); }
-html[data-theme="dark"] .quality-ring {
-    background:
-        radial-gradient(circle at center, #122740 0 55%, transparent 56%),
-        conic-gradient(var(--mint) 0 86%, rgba(89, 210, 255, 0.12) 86% 100%);
-}
-html[data-theme="dark"] .quality-actions-grid button { background: rgba(89, 210, 255, 0.10); }
-
 /* CTA band keeps bright gradient -> keep its white button text dark */
 html[data-theme="dark"] .portfolio-cta .button-primary { color: #0a4cc0; background: #fff; }
 

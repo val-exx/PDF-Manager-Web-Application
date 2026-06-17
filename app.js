@@ -757,7 +757,6 @@ const sourcePanel = document.getElementById("sourcePanel");
 const previewSection = document.getElementById("previewSection");
 const portfolioSection = document.getElementById("portfolioSection");
 const pdfManagerApp = document.getElementById("pdfManagerApp");
-const qualityDemoApp = document.getElementById("qualityDemoApp");
 const finalPreviewFrame = document.getElementById("finalPreviewFrame");
 const pagesGrid = document.getElementById("pagesGrid");
 const sourcePagesGrid = document.getElementById("sourcePagesGrid");
@@ -855,21 +854,11 @@ const pages = {
     description: "PDF Manager online per eliminare pagine, aggiungere pagine da altri PDF, visualizzare l'anteprima finale e salvare il documento modificato direttamente dal browser.",
     canonical: "https://valexlab.eu/pdfmanager",
   },
-  qualityDemo: {
-    path: "/qualiflow",
-    title: "QualiFlow PMI Demo - ValexLab",
-    description: "Demo del gestionale qualità QualiFlow PMI per audit, non conformità 8D, checklist ISO/IATF, documenti, scadenze, manutenzioni e KPI.",
-    canonical: "https://valexlab.eu/qualiflow",
-  },
 };
 
 function normalizePath(pathname) {
   if (pathname === "/pdfmanager" || pathname === "/pdfmanager/") {
     return "/pdfmanager";
-  }
-
-  if (pathname === "/qualiflow" || pathname === "/qualiflow/") {
-    return "/qualiflow";
   }
 
   return "/";
@@ -887,12 +876,10 @@ function setPageMetadata(page) {
 function renderRoute(pathname = window.location.pathname) {
   const path = normalizePath(pathname);
   const isPdfManager = path === "/pdfmanager";
-  const isQualityDemo = path === "/qualiflow";
-  const page = isPdfManager ? pages.pdfManager : isQualityDemo ? pages.qualityDemo : pages.home;
+  const page = isPdfManager ? pages.pdfManager : pages.home;
 
-  portfolioSection.hidden = isPdfManager || isQualityDemo;
+  portfolioSection.hidden = isPdfManager;
   pdfManagerApp.hidden = !isPdfManager;
-  qualityDemoApp.hidden = !isQualityDemo;
   setPageMetadata(page);
 
   navLinks.forEach((link) => {
